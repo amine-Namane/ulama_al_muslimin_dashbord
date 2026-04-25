@@ -12,7 +12,6 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
-import { cn } from '@/lib/utils'
 import { useTableUrlState } from '@/hooks/use-table-url-state'
 import {
   Table,
@@ -65,7 +64,6 @@ export function TasksTable({ data }: DataTableProps) {
     ],
   })
 
-  // eslint-disable-next-line react-hooks/incompatible-library
   const table = useReactTable({
     data,
     columns,
@@ -105,12 +103,7 @@ export function TasksTable({ data }: DataTableProps) {
   }, [pageCount, ensurePageInRange])
 
   return (
-    <div
-      className={cn(
-        'max-sm:has-[div[role="toolbar"]]:mb-16', // Add margin bottom to the table on mobile when the toolbar is visible
-        'flex flex-1 flex-col gap-4'
-      )}
-    >
+    <div className='space-y-4 max-sm:has-[div[role="toolbar"]]:mb-16'>
       <DataTableToolbar
         table={table}
         searchPlaceholder='Filter by title or ID...'
@@ -128,20 +121,13 @@ export function TasksTable({ data }: DataTableProps) {
         ]}
       />
       <div className='overflow-hidden rounded-md border'>
-        <Table className='min-w-xl'>
+        <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead
-                      key={header.id}
-                      colSpan={header.colSpan}
-                      className={cn(
-                        header.column.columnDef.meta?.className,
-                        header.column.columnDef.meta?.thClassName
-                      )}
-                    >
+                    <TableHead key={header.id} colSpan={header.colSpan}>
                       {header.isPlaceholder
                         ? null
                         : flexRender(
@@ -162,13 +148,7 @@ export function TasksTable({ data }: DataTableProps) {
                   data-state={row.getIsSelected() && 'selected'}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell
-                      key={cell.id}
-                      className={cn(
-                        cell.column.columnDef.meta?.className,
-                        cell.column.columnDef.meta?.tdClassName
-                      )}
-                    >
+                    <TableCell key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
@@ -190,7 +170,7 @@ export function TasksTable({ data }: DataTableProps) {
           </TableBody>
         </Table>
       </div>
-      <DataTablePagination table={table} className='mt-auto' />
+      <DataTablePagination table={table} />
       <DataTableBulkActions table={table} />
     </div>
   )

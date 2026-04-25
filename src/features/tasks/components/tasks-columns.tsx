@@ -45,17 +45,15 @@ export const tasksColumns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='Title' />
     ),
-    meta: {
-      className: 'ps-1 max-w-0 w-2/3',
-      tdClassName: 'ps-4',
-    },
     cell: ({ row }) => {
       const label = labels.find((label) => label.value === row.original.label)
 
       return (
         <div className='flex space-x-2'>
           {label && <Badge variant='outline'>{label.label}</Badge>}
-          <span className='truncate font-medium'>{row.getValue('title')}</span>
+          <span className='max-w-32 truncate font-medium sm:max-w-72 md:max-w-[31rem]'>
+            {row.getValue('title')}
+          </span>
         </div>
       )
     },
@@ -65,7 +63,6 @@ export const tasksColumns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='Status' />
     ),
-    meta: { className: 'ps-1', tdClassName: 'ps-4' },
     cell: ({ row }) => {
       const status = statuses.find(
         (status) => status.value === row.getValue('status')
@@ -78,7 +75,7 @@ export const tasksColumns: ColumnDef<Task>[] = [
       return (
         <div className='flex w-[100px] items-center gap-2'>
           {status.icon && (
-            <status.icon className='size-4 text-muted-foreground' />
+            <status.icon className='text-muted-foreground size-4' />
           )}
           <span>{status.label}</span>
         </div>
@@ -93,7 +90,6 @@ export const tasksColumns: ColumnDef<Task>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title='Priority' />
     ),
-    meta: { className: 'ps-1', tdClassName: 'ps-3' },
     cell: ({ row }) => {
       const priority = priorities.find(
         (priority) => priority.value === row.getValue('priority')
@@ -106,7 +102,7 @@ export const tasksColumns: ColumnDef<Task>[] = [
       return (
         <div className='flex items-center gap-2'>
           {priority.icon && (
-            <priority.icon className='size-4 text-muted-foreground' />
+            <priority.icon className='text-muted-foreground size-4' />
           )}
           <span>{priority.label}</span>
         </div>

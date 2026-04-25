@@ -26,12 +26,13 @@ import { PasswordInput } from '@/components/password-input'
 import { SelectDropdown } from '@/components/select-dropdown'
 import { roles } from '../data/data'
 import { type User } from '../data/schema'
+import { useCreateUser } from '../api/usersapi'
+import { useGetRole } from '@/features/roles/api/rolesapi'
 
 const formSchema = z
   .object({
     firstName: z.string().min(1, 'First Name is required.'),
     lastName: z.string().min(1, 'Last Name is required.'),
-    username: z.string().min(1, 'Username is required.'),
     phoneNumber: z.string().min(1, 'Phone number is required.'),
     email: z.email({
       error: (iss) => (iss.input === '' ? 'Email is required.' : undefined),
@@ -117,7 +118,6 @@ export function UsersActionDialog({
       : {
           firstName: '',
           lastName: '',
-          username: '',
           email: '',
           role: '',
           phoneNumber: '',
@@ -126,13 +126,36 @@ export function UsersActionDialog({
           isEdit,
         },
   })
-
-  const onSubmit = (values: UserForm) => {
-    form.reset()
-    showSubmittedData(values)
-    onOpenChange(false)
+  // const { data:Role } = useGetRole()
+  const { mutate: createUser, isPending } = useCreateUser()
+//   const onSubmit = (values: UserForm) => {
+//     showSubmittedData(values)
+// if (!isEdit) { form.reset}
+//     // close dialog
+//     onOpenChange(false)
+//   }
+const onSubmit = (values: UserForm) => {
+  // prepare payload to match your backend format
+  const payload = {
+    firstName: values.firstName,
+    lastName: values.lastName,
+    email: values.email,
+    password: values.password,
+      phone: values.phoneNumber,
+   roleId:values.role
+    // permissions: values.permissions.map((perm) => {
+    //   const [module, action] = perm.split('.')
+    //   return { module, actions: 'get' }
+    // }),
   }
 
+  createUser(payload, {
+    onSuccess: () => {
+      form.reset()
+      onOpenChange(false)
+    },
+  })
+}
   const isPasswordTouched = !!form.formState.dirtyFields.password
 
   return (
@@ -145,13 +168,13 @@ export function UsersActionDialog({
     >
       <DialogContent className='sm:max-w-lg'>
         <DialogHeader className='text-start'>
-          <DialogTitle>{isEdit ? 'Edit User' : 'Add New User'}</DialogTitle>
+          <DialogTitle>{isEdit ? 'Edit User' : 'Add  User'}</DialogTitle>
           <DialogDescription>
             {isEdit ? 'Update the user here. ' : 'Create new user here. '}
             Click save when you&apos;re done.
           </DialogDescription>
         </DialogHeader>
-        <div className='h-105 w-[calc(100%+0.75rem)] overflow-y-auto py-1 pe-3'>
+        <div className='h-[26.25rem] w-[calc(100%+0.75rem)] overflow-y-auto py-1 pe-3'>
           <Form {...form}>
             <form
               id='user-form'
@@ -191,25 +214,6 @@ export function UsersActionDialog({
                         placeholder='Doe'
                         className='col-span-4'
                         autoComplete='off'
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage className='col-span-4 col-start-3' />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name='username'
-                render={({ field }) => (
-                  <FormItem className='grid grid-cols-6 items-center space-y-0 gap-x-4 gap-y-1'>
-                    <FormLabel className='col-span-2 text-end'>
-                      Username
-                    </FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder='john_doe'
-                        className='col-span-4'
                         {...field}
                       />
                     </FormControl>
@@ -264,10 +268,12 @@ export function UsersActionDialog({
                       onValueChange={field.onChange}
                       placeholder='Select a role'
                       className='col-span-4'
-                      items={roles.map(({ label, value }) => ({
-                        label,
-                        value,
-                      }))}
+                     items={roles?.map((role) => ({
+                        // Use the correct property name from your Roles type
+                        // Check what property holds the ID: it might be _id, id, roleId, etc.
+                        label: role.label,
+                        value: role?.value, // Adjust based on your actual API response
+                      })) || []}
                     />
                     <FormMessage className='col-span-4 col-start-3' />
                   </FormItem>
@@ -316,8 +322,8 @@ export function UsersActionDialog({
           </Form>
         </div>
         <DialogFooter>
-          <Button type='submit' form='user-form'>
-            Save changes
+          <Button type='submit' form='user-form' className='bg-[#095555]'>
+            {isEdit ? 'Save Changes' : 'Add User'}
           </Button>
         </DialogFooter>
       </DialogContent>

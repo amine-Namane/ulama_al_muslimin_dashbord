@@ -1,150 +1,246 @@
-import { useState } from 'react'
-import { z } from 'zod'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { Link, useNavigate } from '@tanstack/react-router'
-import { Loader2, LogIn } from 'lucide-react'
-import { toast } from 'sonner'
-import { IconFacebook, IconGithub } from '@/assets/brand-icons'
-import { useAuthStore } from '@/stores/auth-store'
-import { sleep, cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { PasswordInput } from '@/components/password-input'
+//  import { useState } from "react";
+// import { useNavigate, useLocation } from "react-router-dom";
+// import Joi from "joi";
+// import Swal from "sweetalert2";
+// import { useAuth } from "@/context/authContext";
+// import { AuthLayout } from"@/layouts/AuthLayout"
 
-const formSchema = z.object({
-  email: z.email({
-    error: (iss) => (iss.input === '' ? 'Please enter your email.' : undefined),
-  }),
-  password: z
-    .string()
-    .min(1, 'Please enter your password.')
-    .min(7, 'Password must be at least 7 characters long.'),
-})
 
-interface UserAuthFormProps extends React.HTMLAttributes<HTMLFormElement> {
-  redirectTo?: string
-}
+// export default function Login() {
+//   const { login } = useAuth();
+//   const navigate = useNavigate();
+//   const location = useLocation();
 
-export function UserAuthForm({
-  className,
-  redirectTo,
-  ...props
-}: UserAuthFormProps) {
-  const [isLoading, setIsLoading] = useState(false)
-  const navigate = useNavigate()
-  const { auth } = useAuthStore()
+//   const [form, setForm] = useState({ email: "", password: "" });
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      email: '',
-      password: '',
-    },
-  })
+//   const schema = Joi.object({
+//     email: Joi.string().required().messages({
+//       "string.empty": "Email is required",
+//     }),
+//     password: Joi.string().required().messages({
+//       "string.empty": "Password is required",
+//     }),
+//   });
 
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    setIsLoading(true)
+//   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//     setForm({ ...form, [e.target.name]: e.target.value });
+//   };
 
-    toast.promise(sleep(2000), {
-      loading: 'Signing in...',
-      success: () => {
-        setIsLoading(false)
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault();
+//     const { error } = schema.validate(form, { abortEarly: false });
+//     if (error) {
+//       Swal.fire({
+//         icon: "error",
+//         title: "Validation Error",
+//         text: error.details.map((d) => d.message).join("\n"),
+//       });
+//       return;
+//     }
 
-        // Mock successful authentication with expiry computed at success time
-        const mockUser = {
-          accountNo: 'ACC001',
-          email: data.email,
-          role: ['user'],
-          exp: Date.now() + 24 * 60 * 60 * 1000, // 24 hours from now
-        }
+//     Swal.fire({
+//       title: "Logging in...",
+//       allowOutsideClick: false,
+//       allowEscapeKey: false,
+//       didOpen: () => {
+//         Swal.showLoading();
+//       },
+//     });
 
-        // Set user and access token
-        auth.setUser(mockUser)
-        auth.setAccessToken('mock-access-token')
+//     try {
+//       const res = await login(form.email, form.password);
 
-        // Redirect to the stored location or default to dashboard
-        const targetPath = redirectTo || '/'
-        navigate({ to: targetPath, replace: true })
+//       Swal.close();
+//       Swal.fire({
+//         icon: "success",
+//         title: "Login successful",
+//         timer: 2000,
+//         showConfirmButton: false,
+//       });
 
-        return `Welcome back, ${data.email}!`
-      },
-      error: 'Error',
-    })
-  }
+//       // Get redirect path if passed in query
+//       const redirectPath =
+//         new URLSearchParams(location.search).get("redirect") || "/";
+
+//       navigate(redirectPath);
+//     } catch (err: any) {
+//       Swal.close();
+//       Swal.fire({
+//         icon: "error",
+//         title: err.message || "Login failed",
+//         timer: 3000,
+//         showConfirmButton: false,
+//       });
+//     }
+//   };
+
+//   return (
+//     <AuthLayout>
+//       <h1 className="text-3xl font-extrabold text-[#13424e] mb-6">Login</h1>
+//       <form className="space-y-4" onSubmit={handleSubmit}>
+//         <div>
+//           <label className="block mb-1 text-sm font-semibold">Email</label>
+//           <input
+//             name="email"
+//             type="email"
+//             className="w-full border rounded-md p-2"
+//             placeholder="Enter your email"
+//             value={form.email}
+//             onChange={handleChange}
+//           />
+//         </div>
+
+//         <div>
+//           <label className="block mb-1 text-sm font-semibold">Password</label>
+//           <input
+//             name="password"
+//             type="password"
+//             className="w-full border rounded-md p-2"
+//             placeholder="Enter your password"
+//             value={form.password}
+//             onChange={handleChange}
+//           />
+//         </div>
+
+//         <button
+//           type="submit"
+//           className="w-full bg-[#13424e] text-white py-2 rounded-full"
+//         >
+//           Login
+//         </button>
+//       </form>
+//     </AuthLayout>
+//   );
+// }
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useSearch, useRouter } from '@tanstack/react-router';
+// import { useLogin } from '@/hooks/useAuth';
+// import { useAuthStore } from '@/context/authContext';
+// import Swal from 'sweetalert2';
+
+export const Login = () => {
+  const router = useRouter();
+  const navigate = useNavigate();
+  const { redirect } = useSearch({ from: '/(auth)/sign-in' });
+
+  // const user = useAuthStore((state) => state.user);
+  // const clearAuth = useAuthStore((state) => state.clearAuth);
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState({ email: '', password: '' });
+
+  // const loginMutation = useLogin();
+
+  // useEffect(() => {
+  //   if (redirect) clearAuth();
+  // }, [redirect, clearAuth]);
+
+  // useEffect(() => {
+  //   if (user) {
+  //     router.navigate({ to: '/' });
+  //   }
+  // }, [user, router]);
+
+  // const validate = () => {
+  //   const newErrors = { email: '', password: '' };
+  //   let isValid = true;
+
+  //   if (!email) {
+  //     newErrors.email = 'Email is required';
+  //     isValid = false;
+  //   }
+
+  //   if (!password) {
+  //     newErrors.password = 'Password is required';
+  //     isValid = false;
+  //   }
+
+  //   setErrors(newErrors);
+  //   return isValid;
+  // };
+
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+
+  //   if (!validate()) return;
+
+  //   Swal.fire({
+  //     title: 'جاري تسجيل الدخول الطلب',
+  //     padding: '2em',
+  //     allowOutsideClick: false,
+  //     allowEscapeKey: false,
+  //     didOpen: () => Swal.showLoading(),
+  //   });
+
+  //   try {
+  //     await loginMutation.mutateAsync({ email, password });
+
+  //     Swal.close();
+  //     await Swal.fire({
+  //       icon: 'success',
+  //       title: 'تم تسجيل الدخول بنجاح',
+  //       showConfirmButton: false,
+  //       timer: 3000,
+  //     });
+
+  //     navigate({ to: redirect || '/' });
+  //   } catch (err: any) {
+  //     Swal.close();
+  //     Swal.fire({
+  //       icon: 'error',
+  //       title: err.message || 'Login failed',
+  //       showConfirmButton: false,
+  //       timer: 3000,
+  //     });
+  //   }
+  // };
 
   return (
-    <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className={cn('grid gap-3', className)}
-        {...props}
-      >
-        <FormField
-          control={form.control}
-          name='email'
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Email</FormLabel>
-              <FormControl>
-                <Input placeholder='name@example.com' {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name='password'
-          render={({ field }) => (
-            <FormItem className='relative'>
-              <FormLabel>Password</FormLabel>
-              <FormControl>
-                <PasswordInput placeholder='********' {...field} />
-              </FormControl>
-              <FormMessage />
-              <Link
-                to='/forgot-password'
-                className='absolute inset-e-0 -top-0.5 text-sm font-medium text-muted-foreground hover:opacity-75'
-              >
-                Forgot password?
-              </Link>
-            </FormItem>
-          )}
-        />
-        <Button className='mt-2' disabled={isLoading}>
-          {isLoading ? <Loader2 className='animate-spin' /> : <LogIn />}
-          Sign in
-        </Button>
-
-        <div className='relative my-2'>
-          <div className='absolute inset-0 flex items-center'>
-            <span className='w-full border-t' />
-          </div>
-          <div className='relative flex justify-center text-xs uppercase'>
-            <span className='bg-background px-2 text-muted-foreground'>
-              Or continue with
-            </span>
-          </div>
+    <div>
+      <form className="space-y-5 dark:text-white">
+       {/* onSubmit={handleSubmit}> */}
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium mb-2">
+            Email
+          </label>
+          <input
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#13424e]"
+          />
+          {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
         </div>
 
-        <div className='grid grid-cols-2 gap-2'>
-          <Button variant='outline' type='button' disabled={isLoading}>
-            <IconGithub className='h-4 w-4' /> GitHub
-          </Button>
-          <Button variant='outline' type='button' disabled={isLoading}>
-            <IconFacebook className='h-4 w-4' /> Facebook
-          </Button>
+        <div>
+          <label htmlFor="password" className="block text-sm font-medium mb-2">
+            Password
+          </label>
+          <input
+            id="password"
+            type="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#13424e]"
+          />
+          {errors.password && (
+            <p className="mt-1 text-sm text-red-500">{errors.password}</p>
+          )}
         </div>
+
+        <button
+          type="submit"
+          // disabled={loginMutation.isPending}
+          className="w-full rounded-full bg-[#13424e] px-6 py-3 text-lg font-semibold text-white shadow-none hover:bg-[#0f353d] disabled:opacity-50"
+        >
+          {/* {loginMutation.isPending ? 'Logging in...' : 'Login'} */}
+          Login
+        </button>
       </form>
-    </Form>
-  )
-}
+    </div>
+  );
+};

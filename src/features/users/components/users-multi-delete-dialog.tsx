@@ -38,7 +38,6 @@ export function UsersMultiDeleteDialog<TData>({
     toast.promise(sleep(2000), {
       loading: 'Deleting users...',
       success: () => {
-        setValue('')
         table.resetRowSelection()
         return `Deleted ${selectedRows.length} ${
           selectedRows.length > 1 ? 'users' : 'user'
@@ -52,12 +51,12 @@ export function UsersMultiDeleteDialog<TData>({
     <ConfirmDialog
       open={open}
       onOpenChange={onOpenChange}
-      form='users-multi-delete-form'
+      handleConfirm={handleDelete}
       disabled={value.trim() !== CONFIRM_WORD}
       title={
         <span className='text-destructive'>
           <AlertTriangle
-            className='me-1 inline-block stroke-destructive'
+            className='stroke-destructive me-1 inline-block'
             size={18}
           />{' '}
           Delete {selectedRows.length}{' '}
@@ -65,14 +64,7 @@ export function UsersMultiDeleteDialog<TData>({
         </span>
       }
       desc={
-        <form
-          id='users-multi-delete-form'
-          onSubmit={(e) => {
-            e.preventDefault()
-            handleDelete()
-          }}
-          className='space-y-4'
-        >
+        <div className='space-y-4'>
           <p className='mb-2'>
             Are you sure you want to delete the selected users? <br />
             This action cannot be undone.
@@ -84,7 +76,6 @@ export function UsersMultiDeleteDialog<TData>({
               value={value}
               onChange={(e) => setValue(e.target.value)}
               placeholder={`Type "${CONFIRM_WORD}" to confirm.`}
-              autoFocus
             />
           </Label>
 
@@ -94,7 +85,7 @@ export function UsersMultiDeleteDialog<TData>({
               Please be careful, this operation can not be rolled back.
             </AlertDescription>
           </Alert>
-        </form>
+        </div>
       }
       confirmText='Delete'
       destructive

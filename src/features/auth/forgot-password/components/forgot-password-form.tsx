@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useNavigate } from '@tanstack/react-router'
 import { ArrowRight, Loader2 } from 'lucide-react'
 import { toast } from 'sonner'
-import { sleep, cn } from '@/lib/utils'
+import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -16,11 +16,13 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
+import { useForgotPassword } from '@/hooks/useAuth'
 
 const formSchema = z.object({
-  email: z.email({
-    error: (iss) => (iss.input === '' ? 'Please enter your email.' : undefined),
-  }),
+  email: z
+    .string()
+    .min(1, 'Please enter your email')
+    .email('Please enter a valid email'),
 })
 
 export function ForgotPasswordForm({
@@ -28,6 +30,7 @@ export function ForgotPasswordForm({
   ...props
 }: React.HTMLAttributes<HTMLFormElement>) {
   const navigate = useNavigate()
+  const forgotPassword = useForgotPassword()
   const [isLoading, setIsLoading] = useState(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -35,18 +38,22 @@ export function ForgotPasswordForm({
     defaultValues: { email: '' },
   })
 
-  function onSubmit(data: z.infer<typeof formSchema>) {
+  async function onSubmit(data: z.infer<typeof formSchema>) {
     setIsLoading(true)
 
-    toast.promise(sleep(2000), {
-      loading: 'Sending email...',
-      success: () => {
+    forgotPassword.mutate(data, {
+      onSuccess: (response) => {
         setIsLoading(false)
+        toast.success(response.message || 'Reset email sent successfully!')
         form.reset()
-        navigate({ to: '/otp' })
-        return `Email sent to ${data.email}`
+        navigate({ to: '/otp',search: { email: data.email } }) 
       },
-      error: 'Error',
+      onError: (error: any) => {
+        setIsLoading(false)
+        toast.error(
+          error?.message || 'Something went wrong. Please try again.'
+        )
+      },
     })
   }
 
@@ -70,9 +77,22 @@ export function ForgotPasswordForm({
             </FormItem>
           )}
         />
-        <Button className='mt-2' disabled={isLoading}>
-          Continue
-          {isLoading ? <Loader2 className='animate-spin' /> : <ArrowRight />}
+        <Button
+          type='submit'
+          className='mt-2 bg-[#095555]'
+          disabled={isLoading || forgotPassword.isPending}
+        >
+          {isLoading || forgotPassword.isPending ? (
+            <>
+              Sending...
+              <Loader2 className='ml-2 animate-spin' size={16} />
+            </>
+          ) : (
+            <>
+              Continue
+              <ArrowRight className='ml-2' size={16} />
+            </>
+          )}
         </Button>
       </form>
     </Form>

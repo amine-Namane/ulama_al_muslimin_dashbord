@@ -13,7 +13,7 @@ import { OtpForm } from './components/otp-form'
 export function Otp() {
   return (
     <AuthLayout>
-      <Card className='max-w-md gap-4'>
+      <Card className='gap-4'>
         <CardHeader>
           <CardTitle className='text-base tracking-tight'>
             Two-factor Authentication
@@ -27,11 +27,11 @@ export function Otp() {
           <OtpForm />
         </CardContent>
         <CardFooter>
-          <p className='px-8 text-center text-sm text-muted-foreground'>
+          <p className='text-muted-foreground px-8 text-center text-sm'>
             Haven't received it?{' '}
             <Link
               to='/sign-in'
-              className='underline underline-offset-4 hover:text-primary'
+              className='hover:text-primary underline underline-offset-4'
             >
               Resend a new code.
             </Link>

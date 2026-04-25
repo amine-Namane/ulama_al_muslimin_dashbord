@@ -13,7 +13,7 @@ import { SignUpForm } from './components/sign-up-form'
 export function SignUp() {
   return (
     <AuthLayout>
-      <Card className='max-w-sm gap-4'>
+      <Card className='gap-4'>
         <CardHeader>
           <CardTitle className='text-lg tracking-tight'>
             Create an account
@@ -23,7 +23,7 @@ export function SignUp() {
             Already have an account?{' '}
             <Link
               to='/sign-in'
-              className='underline underline-offset-4 hover:text-primary'
+              className='hover:text-primary underline underline-offset-4'
             >
               Sign In
             </Link>
@@ -33,18 +33,18 @@ export function SignUp() {
           <SignUpForm />
         </CardContent>
         <CardFooter>
-          <p className='px-8 text-center text-sm text-muted-foreground'>
+          <p className='text-muted-foreground px-8 text-center text-sm'>
             By creating an account, you agree to our{' '}
             <a
               href='/terms'
-              className='underline underline-offset-4 hover:text-primary'
+              className='hover:text-primary underline underline-offset-4'
             >
               Terms of Service
             </a>{' '}
             and{' '}
             <a
               href='/privacy'
-              className='underline underline-offset-4 hover:text-primary'
+              className='hover:text-primary underline underline-offset-4'
             >
               Privacy Policy
             </a>

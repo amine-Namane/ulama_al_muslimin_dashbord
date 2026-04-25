@@ -17,6 +17,7 @@ import { ThemeProvider } from './context/theme-provider'
 import { routeTree } from './routeTree.gen'
 // Styles
 import './styles/index.css'
+import './i18n'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -59,10 +60,7 @@ const queryClient = new QueryClient({
         }
         if (error.response?.status === 500) {
           toast.error('Internal Server Error!')
-          // Only navigate to error page in production to avoid disrupting HMR in development
-          if (import.meta.env.PROD) {
-            router.navigate({ to: '/500' })
-          }
+          router.navigate({ to: '/500' })
         }
         if (error.response?.status === 403) {
           // router.navigate("/forbidden", { replace: true });

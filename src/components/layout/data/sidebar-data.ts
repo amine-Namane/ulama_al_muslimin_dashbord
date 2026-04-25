@@ -21,185 +21,155 @@ import {
   AudioWaveform,
   Command,
   GalleryVerticalEnd,
+  Image,
+  Backpack,
 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { ClerkLogo } from '@/assets/clerk-logo'
+import ChatIcon from '@/assets/custom/icon-chat'
+import DocumentIcon from '@/assets/custom/icon-document'
+import HandIcon from '@/assets/custom/icon-hand'
+import ImageIcon from '@/assets/custom/icon-image'
+import LightbulbIcon from '@/assets/custom/icon-lightbulb'
+import UsersIcon from '@/assets/custom/icon-users'
+import WorkIcon from '@/assets/custom/icon-work'
 import { type SidebarData } from '../types'
 
-export const sidebarData: SidebarData = {
-  user: {
-    name: 'satnaing',
-    email: 'satnaingdev@gmail.com',
-    avatar: '/avatars/shadcn.jpg',
-  },
-  teams: [
-    {
-      name: 'Shadcn Admin',
-      logo: Command,
-      plan: 'Vite + ShadcnUI',
+export const useSidebarData = (): SidebarData => {
+  const { t } = useTranslation()
+
+  return {
+    user: {
+      name: 'satnaing',
+      email: 'satnaingdev@gmail.com',
+      avatar: '/avatars/shadcn.jpg',
     },
-    {
-      name: 'Acme Inc',
-      logo: GalleryVerticalEnd,
-      plan: 'Enterprise',
-    },
-    {
-      name: 'Acme Corp.',
-      logo: AudioWaveform,
-      plan: 'Startup',
-    },
-  ],
-  navGroups: [
-    {
-      title: 'General',
-      items: [
-        {
-          title: 'Dashboard',
-          url: '/',
-          icon: LayoutDashboard,
-        },
-        {
-          title: 'Tasks',
-          url: '/tasks',
-          icon: ListTodo,
-        },
-        {
-          title: 'Apps',
-          url: '/apps',
-          icon: Package,
-        },
-        {
-          title: 'Chats',
-          url: '/chats',
-          badge: '3',
-          icon: MessagesSquare,
-        },
-        {
-          title: 'Users',
-          url: '/users',
-          icon: Users,
-        },
-        {
-          title: 'Secured by Clerk',
-          icon: ClerkLogo,
-          items: [
-            {
-              title: 'Sign In',
-              url: '/clerk/sign-in',
-            },
-            {
-              title: 'Sign Up',
-              url: '/clerk/sign-up',
-            },
-            {
-              title: 'User Management',
-              url: '/clerk/user-management',
-            },
-          ],
-        },
-      ],
-    },
-    {
-      title: 'Pages',
-      items: [
-        {
-          title: 'Auth',
-          icon: ShieldCheck,
-          items: [
-            {
-              title: 'Sign In',
-              url: '/sign-in',
-            },
-            {
-              title: 'Sign In (2 Col)',
-              url: '/sign-in-2',
-            },
-            {
-              title: 'Sign Up',
-              url: '/sign-up',
-            },
-            {
-              title: 'Forgot Password',
-              url: '/forgot-password',
-            },
-            {
-              title: 'OTP',
-              url: '/otp',
-            },
-          ],
-        },
-        {
-          title: 'Errors',
-          icon: Bug,
-          items: [
-            {
-              title: 'Unauthorized',
-              url: '/errors/unauthorized',
-              icon: Lock,
-            },
-            {
-              title: 'Forbidden',
-              url: '/errors/forbidden',
-              icon: UserX,
-            },
-            {
-              title: 'Not Found',
-              url: '/errors/not-found',
-              icon: FileX,
-            },
-            {
-              title: 'Internal Server Error',
-              url: '/errors/internal-server-error',
-              icon: ServerOff,
-            },
-            {
-              title: 'Maintenance Error',
-              url: '/errors/maintenance-error',
-              icon: Construction,
-            },
-          ],
-        },
-      ],
-    },
-    {
-      title: 'Other',
-      items: [
-        {
-          title: 'Settings',
-          icon: Settings,
-          items: [
-            {
-              title: 'Profile',
-              url: '/settings',
-              icon: UserCog,
-            },
-            {
-              title: 'Account',
-              url: '/settings/account',
-              icon: Wrench,
-            },
-            {
-              title: 'Appearance',
-              url: '/settings/appearance',
-              icon: Palette,
-            },
-            {
-              title: 'Notifications',
-              url: '/settings/notifications',
-              icon: Bell,
-            },
-            {
-              title: 'Display',
-              url: '/settings/display',
-              icon: Monitor,
-            },
-          ],
-        },
-        {
-          title: 'Help Center',
-          url: '/help-center',
-          icon: HelpCircle,
-        },
-      ],
-    },
-  ],
+    teams: [
+      {
+        name: 'Shadcn Admin',
+        logo: '/images/Oulemas-removebg-preview.png',
+        plan: 'Vite + ShadcnUI',
+      },
+      {
+        name: 'Acme Inc',
+        logo: GalleryVerticalEnd,
+        plan: 'Enterprise',
+      },
+      {
+        name: 'Acme Corp.',
+        logo: AudioWaveform,
+        plan: 'Startup',
+      },
+    ],
+    navGroups: [
+      {
+        title: 'General',
+        items: [
+          {
+            title: t('sidebar.dashboard'),
+            url: '/',
+            icon: LayoutDashboard,
+          },
+          {
+            title: t('sidebar.websiteContent'),
+            icon: ImageIcon,
+            items: [
+              {
+                title: t('sidebar.topBar'),
+                url: '/topbar',
+              },
+              {
+                title: t('sidebar.pageManagement'),
+                url: '/pages',
+              },
+              {
+                title: t('sidebar.mediaManagement'),
+                url: '/media',
+              },
+              {
+                title: t('sidebar.newsManagement'),
+                url: '/news',
+              },
+            ],
+          },
+          {
+            title: t('sidebar.projectManagement'),
+            url: '/projects',
+            icon: WorkIcon,
+          },
+          {
+            title: t('sidebar.fatwaManagement'),
+            url: '/fatwa',
+            icon: DocumentIcon,
+          },
+          {
+            title: t('sidebar.userManagement'),
+            url: '/users',
+            icon: UsersIcon,
+          },
+          {
+            title: t('sidebar.studentManagement'),
+            url: '/students',
+            icon: Backpack,
+          },
+          {
+            title: t('sidebar.contactRequests'),
+            url: '/contact-requests',
+            icon: ChatIcon,
+          },
+          {
+            title: t('sidebar.donationManagement'),
+            url: '/donation',
+            icon: HandIcon,
+          },
+          {
+            title: t('sidebar.activitiesManagement'),
+            url: '/activities',
+            icon: LightbulbIcon,
+          },
+          {
+            title: t('sidebar.volunteerManagement'),
+            icon: HandIcon,
+            items: [
+              {
+                title: t('sidebar.volunteerCampaigns'),
+                url: '/Campaigns',
+              },
+              {
+                title: t('sidebar.volunteerRequests'),
+                url: '/Volunteer-requests',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: t('sidebar.other'),
+        items: [
+          {
+            title: t('sidebar.settings'),
+            icon: Settings,
+            items: [
+              {
+                title: t('sidebar.generalSettings'),
+                url: '/settings',
+              },
+              {
+                title: t('sidebar.officesBranches'),
+                url: '/offices',
+              },
+              {
+                title: t('sidebar.permissions'),
+                url: '/roles',
+              },
+              {
+                title: t('sidebar.categoryManagement'),
+                url: '/catigories',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  }
 }

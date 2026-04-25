@@ -10,33 +10,38 @@ import { UsersPrimaryButtons } from './components/users-primary-buttons'
 import { UsersProvider } from './components/users-provider'
 import { UsersTable } from './components/users-table'
 import { users } from './data/users'
-
+import { useTranslation } from "react-i18next";
 const route = getRouteApi('/_authenticated/users/')
 
 export function Users() {
+    const { t, i18n } = useTranslation();
   const search = route.useSearch()
   const navigate = route.useNavigate()
 
   return (
     <UsersProvider>
       <Header fixed>
-        <Search className='me-auto' />
-        <ThemeSwitch />
-        <ConfigDrawer />
-        <ProfileDropdown />
+        <Search />
+        <div className='ms-auto flex items-center space-x-4'>
+          <ThemeSwitch />
+          <ConfigDrawer />
+          <ProfileDropdown />
+        </div>
       </Header>
 
-      <Main className='flex flex-1 flex-col gap-4 sm:gap-6'>
-        <div className='flex flex-wrap items-end justify-between gap-2'>
+      <Main>
+        <div className='mb-2 flex flex-wrap items-center justify-between space-y-2'>
           <div>
-            <h2 className='text-2xl font-bold tracking-tight'>User List</h2>
+            <h2 className='text-2xl font-bold tracking-tight'>{t("users.title")} </h2>
             <p className='text-muted-foreground'>
-              Manage your users and their roles here.
+           {t("users.description")}  
             </p>
           </div>
           <UsersPrimaryButtons />
         </div>
-        <UsersTable data={users} search={search} navigate={navigate} />
+        <div className='-mx-4 flex-1 overflow-auto px-4 py-1 lg:flex-row lg:space-y-0 lg:space-x-12'>
+          <UsersTable data={users} search={search} navigate={navigate} />
+        </div>
       </Main>
 
       <UsersDialogs />

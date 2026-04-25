@@ -12,13 +12,16 @@ import {
   CommandList,
   CommandSeparator,
 } from '@/components/ui/command'
-import { sidebarData } from './layout/data/sidebar-data'
+import { useSidebarData } from './layout/data/sidebar-data' // Make sure this path is correct
 import { ScrollArea } from './ui/scroll-area'
 
 export function CommandMenu() {
   const navigate = useNavigate()
   const { setTheme } = useTheme()
   const { open, setOpen } = useSearch()
+  
+  // Call the hook to get the sidebar data
+  const sidebarData = useSidebarData()
 
   const runCommand = React.useCallback(
     (command: () => unknown) => {
@@ -27,6 +30,11 @@ export function CommandMenu() {
     },
     [setOpen]
   )
+
+  // Add safety check
+  if (!sidebarData || !sidebarData.navGroups) {
+    return null
+  }
 
   return (
     <CommandDialog modal open={open} onOpenChange={setOpen}>

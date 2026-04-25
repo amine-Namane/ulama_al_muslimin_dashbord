@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import './theme.css';
+
+:root {
+  --chart-5: oklch(0.645 0.246 16.439);
+}
+
+@layer base {
+  * {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+  }
+}
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -14,7 +26,8 @@
     @apply overflow-x-hidden;
   }
   body {
-    @apply min-h-svh w-full bg-background text-foreground has-[div[data-variant='inset']]:bg-sidebar;
+    @apply bg-background text-foreground has-[div[data-variant='inset']]:bg-sidebar min-h-svh w-full;
+     font-family: 'IBM Plex Sans Arabic', sans-serif;
   }
 
   /* Override Radix scroll locking for sticky headers */
@@ -54,7 +67,7 @@
 }
 
 @utility faded-bottom {
-  @apply after:pointer-events-none after:absolute after:inset-s-0 after:bottom-0 after:hidden after:h-32 after:w-full after:rounded-b-2xl after:bg-[linear-gradient(180deg,transparent_10%,var(--background)_70%)] md:after:block;
+  @apply after:pointer-events-none after:absolute after:start-0 after:bottom-0 after:hidden after:h-32 after:w-full after:rounded-b-2xl after:bg-[linear-gradient(180deg,_transparent_10%,_var(--background)_70%)] md:after:block;
 }
 
 /* styles.css */

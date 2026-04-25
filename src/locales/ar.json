@@ -1,0 +1,1064 @@
+{
+  "users": {
+    "title": "إدارة المستخدمين",
+    "description": "قم بإدارة جميع المستخدمين وعرض بياناتهم",
+    "actions": {
+      "add": "إضافة مستخدم",
+      "filter": "تصفية المستخدمين...",
+      "view": "عرض"
+    },
+    "deleteUser": "حذف المستخدم",
+    "deleteConfirmQuestion": "هل أنت متأكد أنك تريد حذف",
+    "deleteConfirmRole": "سيؤدي هذا الإجراء إلى إزالة المستخدم صاحب الدور",
+    "usernameLabel": "اسم المستخدم:",
+    "enterUsernamePlaceholder": "أدخل اسم المستخدم لتأكيد الحذف.",
+    "deleteWarning": "يرجى الانتباه، هذه العملية لا يمكن التراجع عنها.",
+    "deletedMessage": "تم حذف المستخدم التالي:",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "deleteSelected": "حذف المحدد",
+    "clearSelection": "مسح التحديد",
+    "openMenu": "فتح القائمة",
+    "common": {
+      "delete": "حذف",
+      "warning": "تحذير!",
+      "cannotBeUndone": "لا يمكن التراجع عن هذا.",
+      "noResults": "لم يتم العثور على نتائج."
+    },
+    "columns": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "role": "الدور",
+      "status": "الحالة"
+    },
+    "deleteConfirmation": {
+      "title": "هل أنت متأكد؟",
+      "description": "سيؤدي هذا الإجراء إلى حذف نهائي",
+      "cancel": "إلغاء",
+      "delete": "حذف"
+    },
+    "userForm": {
+      "add": "إضافة مستخدم",
+      "edit": "تعديل مستخدم",
+      "editDescription": "تحديث معلومات المستخدم.",
+      "addDescription": "إضافة مستخدم جديد للنظام.",
+      "createNew": "أنشئ مستخدمًا جديدًا هنا.",
+      "update": "تحديث",
+      "clickSave": "اضغط حفظ عند الانتهاء.",
+      "firstName": "الاسم الأول",
+      "firstNamePlaceholder": "محمد",
+      "lastName": "الاسم الأخير",
+      "lastNamePlaceholder": "أحمد",
+      "username": "اسم المستخدم",
+      "usernamePlaceholder": "mohamed123",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "mohamed@gmail.com",
+      "phoneNumber": "رقم الهاتف",
+      "phoneNumberPlaceholder": "+213654321",
+      "role": "الدور",
+      "selectRole": "اختر دورًا",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "مثال: S3cur3P@ssw0rd",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "confirmPasswordPlaceholder": "أعد إدخال كلمة المرور",
+      "saveChanges": "حفظ التغييرات",
+      "addBtn": "إضافة مستخدم"
+    }
+  },
+
+  "students": {
+    "title": "إدارة الطلاب",
+    "description": "قم بإدارة جميع الطلاب وعرض بياناتهم",
+    "actions": {
+      "add": "إضافة طالب",
+      "filter": "تصفية الطلاب...",
+      "view": "عرض"
+    },
+    "columns": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "grade": "الصف",
+      "status": "الحالة",
+      "gender": "الجنس",
+      "birthDate": "تاريخ الميلاد",
+      "city": "المدينة",
+      "wilaya": "الولاية",
+      "halqa": "الحلقة",
+      "memorizedJuz": "الأجزاء المحفوظة",
+      "guardianName": "اسم ولي الأمر",
+      "guardianPhone": "هاتف ولي الأمر"
+    },
+    "grade": "الصف",
+    "gender": "الجنس",
+    "birthDate": "تاريخ الميلاد",
+    "city": "المدينة",
+    "wilaya": "الولاية",
+    "halqa": "الحلقة",
+    "memorizedJuz": "الأجزاء المحفوظة",
+    "guardianName": "اسم ولي الأمر",
+    "guardianPhone": "هاتف ولي الأمر",
+    "address": "العنوان",
+    "previousExperience": "الخبرة السابقة",
+    "learningGoals": "أهداف التعلم",
+    "personalInfo": "المعلومات الشخصية",
+    "contactInfo": "معلومات الاتصال",
+    "academicInfo": "المعلومات الأكاديمية",
+    "guardianInfo": "معلومات ولي الأمر",
+    "enrollmentDate": "تاريخ التسجيل",
+    "deleteConfirmation": {
+      "title": "هل أنت متأكد؟",
+      "description": "سيؤدي هذا الإجراء إلى حذف نهائي",
+      "cancel": "إلغاء",
+      "delete": "حذف"
+    }
+  },
+
+  "teachers": {
+    "title": "إدارة المعلمين",
+    "description": "قم بإدارة جميع المعلمين وعرض بياناتهم",
+    "actions": {
+      "add": "إضافة معلم",
+      "filter": "تصفية المعلمين...",
+      "view": "عرض"
+    },
+    "columns": {
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "specialization": "التخصص",
+      "status": "الحالة"
+    },
+    "specialization": "التخصص",
+    "gender": "الجنس",
+    "birthDate": "تاريخ الميلاد",
+    "city": "المدينة",
+    "wilaya": "الولاية",
+    "experience": "سنوات الخبرة",
+    "certification": "الشهادة",
+    "availability": "التوفر",
+    "assignedHalqas": "الحلقات الم.assignee",
+    "address": "العنوان",
+    "notes": "ملاحظات",
+    "personalInfo": "المعلومات الشخصية",
+    "contactInfo": "معلومات الاتصال",
+    "professionalInfo": "المعلومات المهنية",
+    "additionalInfo": "معلومات إضافية",
+    "enrollmentDate": "تاريخ التوظيف",
+    "deleteConfirmation": {
+      "title": "هل أنت متأكد؟",
+      "description": "سيؤدي هذا الإجراء إلى حذف نهائي",
+      "cancel": "إلغاء",
+      "delete": "حذف"
+    }
+  },
+
+  "sidebar": {
+    "general": "عام",
+    "dashboard": "لوحة التحكم",
+    "websiteContent": "محتوى الموقع",
+    "topBar": "الشريط العلوي",
+    "pageManagement": "إدارة الصفحات",
+    "mediaManagement": "إدارة الوسائط",
+    "newsManagement": "إدارة الأخبار",
+    "projectManagement": "إدارة المشاريع",
+    "fatwaManagement": "إدارة الفتاوى",
+    "userManagement": "إدارة المستخدمين",
+    "studentManagement": "إدارة الطلاب",
+    "contactRequests": "طلبات الاتصال",
+    "donationManagement": "إدارة التبرعات",
+    "activitiesManagement": "إدارة الأنشطة",
+    "volunteerManagement": "إدارة المتطوعين",
+    "volunteerCampaigns": "حملات التطوع",
+    "volunteerRequests": "طلبات التطوع",
+    "other": "أخرى",
+    "settings": "الإعدادات",
+    "generalSettings": "الإعدادات العامة",
+    "officesBranches": "المكاتب والفروع",
+    "permissions": "الصلاحيات",
+    "categoryManagement": "إدارة التصنيفات"
+  },
+  "newsTable": {
+    "title-2": "محتوى الموقع",
+    "title": "إدارة الأخبار",
+    "desc": "أضف، عدّل أو احذف الأخبار لإبقاء الجميع على اطلاع دائم.",
+    "columns": {
+      "id": "المعرف",
+      "title": "العنوان",
+      "category": "الفئة",
+      "status": "الحالة",
+      "author": "الكاتب",
+      "date": "التاريخ",
+      "actions": "الإجراءات",
+      "content": "المحتوى"
+    },
+    "status": {
+      "draft": "مسودة",
+      "published": "منشور",
+      "archived": "مؤرشف"
+    },
+    "actions": {
+      "view": "عرض",
+      "filter": "تصفية الأخبار...",
+      "edit": "تعديل",
+      "accept": "قبول",
+      "rejected": "رفض",
+      "delete": "حذف",
+      "add": "إضافة خبر",
+      "reply": "الرد",
+      "download": "تحميل"
+    },
+    "messages": {
+      "confirmDelete": "هل أنت متأكد أنك تريد حذف هذا الخبر؟",
+      "noData": "لا توجد أخبار متاحة"
+    },
+    "article": {
+      "title": "مقال",
+      "createNew": "أنشئ خبر جديدًا هنا. اضغط حفظ عند الانتهاء.",
+      "updateteNew": " تعديل خبر جديدًا هنا. اضغط حفظ عند الانتهاء.",
+      "breakingNews": "خبر عاجل: حدث كبير يحدث الآن",
+      "author": "جون دو",
+      "selectCategory": "اختر فئة",
+      "selectStatus": "اختر الحالة",
+      "fullContent": "المحتوى الكامل للمقال...",
+      "addNew": " اضافة خبر",
+      "updateNews": " تعديل خبر"
+    },
+    "news": {
+      "title": "العنوان",
+      "category": "التصنيف",
+      "author": "الكاتب",
+      "publishedAt": "تاريخ النشر",
+      "deleteArticle": "حذف المقال",
+      "deleteConfirmQuestion": "هل أنت متأكد أنك تريد حذف",
+      "deleteConfirmCategory": "سيؤدي هذا إلى إزالة المقال نهائيًا من",
+      "articleSlug": "المعرف (Slug) للمقال",
+      "enterSlugPlaceholder": "أدخل المعرف لتأكيد الحذف.",
+      "deleteWarning": "الرجاء الانتباه، هذه العملية لا يمكن التراجع عنها."
+    },
+    "common": {
+      "actions": "إجراءات",
+      "delete": "حذف",
+      "cancale": "تراجع",
+      "warning": "تحذير!",
+      "cannotBeUndone": "لا يمكن التراجع عن هذا.",
+      "selectAll": "تحديد الكل",
+      "selectRow": "تحديد الصف"
+    }
+  },
+  "projects": {
+    "title": "إدارة المشاريع",
+    "description": "قم بادارة جميع الفتاوي مع امكانية اضافة فتوى جديدة",
+    "actions": {
+      "add": "إضافة مشروع",
+      "filter": "تصفية المشاريع...",
+      "view": "عرض"
+    },
+    "columns": {
+      "name": "اسم المشروع",
+      "type": "النوع",
+      "state": "الولاية",
+      "startDate": "تاريخ البداية",
+      "endDate": "تاريخ النهاية",
+      "donations": "التبرعات المجمعة",
+      "beneficiaries": "المستفيدون",
+      "status": "الحالة",
+      "description": "وصف المشروع"
+    },
+    "project": {
+      "title": "إضافة مشروع",
+      "createNew": "أنشئ مشروعًا جديدًا هنا. اضغط حفظ عند الانتهاء.",
+      "updateNews": "تعديل مشروعًا جديدًا هنا. اضغط حفظ عند الانتهاء.",
+      "example": "ادخل اسم المشروع هنا",
+      "selectType": "اختر النوع",
+      "selectState": "اختر الحالة",
+      "details": "المتطلبات والمواصفات التفصيلية للمشروع...",
+      "filePlaceholder": "لم يتم اختيار ملف",
+      "chooseFile": " صور المشروع",
+      "addNew": "إضافة مشروع",
+      "updateNew": "تعديل مشروع",
+      "deleteProject": "حذف المشروع",
+      "deleteConfirmQuestion": "هل أنت متأكد أنك تريد حذف",
+      "deleteConfirmPriority": "سيؤدي هذا إلى إزالة المشروع نهائيًا ذو",
+      "projectSlug": "المعرف (Slug) للمشروع",
+      "enterSlugPlaceholder": "أدخل معرف المشروع لتأكيد الحذف.",
+      "deleteWarning": "الرجاء الانتباه، هذه العملية لا يمكن التراجع عنها.",
+      "deletedMessage": "تم حذف المشروع التالي:"
+    },
+    "common": {
+      "delete": "حذف",
+      "warning": "تحذير!",
+      "cannotBeUndone": "لا يمكن التراجع عن هذا."
+    }
+  },
+  "fatwas": {
+    "title": "إدارة الفتاوى",
+    "description": "قم بادارة جميع الفتاوي مع امكانية اضافة فتوى جديدة",
+    "actions": {
+      "add": "إضافة فتوى",
+      "filter": "تصفية الفتاوى...",
+      "view": "عرض"
+    },
+    "columns": {
+      "title": "العنوان",
+      "scholar": "الشيخ",
+      "category": "التصنيف",
+      "status": "الحالة",
+      "created": "تاريخ الإنشاء",
+      "actions": "إجراءات"
+    },
+    "fatwaForm": {
+      "add": "إضافة فتوى",
+      "edit": "تعديل فتوى",
+      "createNew": "أنشئ فتوى جديدة هنا.",
+      "update": "قم بتحديث الفتوى هنا.",
+      "clickSave": "اضغط حفظ عند الانتهاء.",
+      "title": "العنوان",
+      "titlePlaceholder": "حكم الصلاة في السفر",
+      "scholar": "العالِم",
+      "scholarPlaceholder": "الشيخ محمد بن صالح العثيمين",
+      "category": "الفئة",
+      "selectCategory": "اختر فئة",
+      "status": "الحالة",
+      "selectStatus": "اختر الحالة",
+      "question": "السؤال",
+      "questionPlaceholder": "ما حكم ...",
+      "answer": "الجواب",
+      "answerPlaceholder": "الحكم هو ...",
+      "updateBtn": "تحديث الفتوى",
+      "addBtn": "إضافة فتوى"
+    },
+    "fatwa": {
+      "deleteFatwa": "حذف الفتوى",
+      "deleteConfirmQuestion": "هل أنت متأكد أنك تريد حذف",
+      "deleteConfirmCategory": "سيؤدي هذا إلى إزالة الفتوى نهائيًا من",
+      "fatwaId": "معرّف الفتوى",
+      "enterIdPlaceholder": "أدخل معرّف الفتوى لتأكيد الحذف.",
+      "deleteWarning": "الرجاء الانتباه، هذه العملية لا يمكن التراجع عنها.",
+      "deletedMessage": "تم حذف الفتوى التالية:"
+    },
+    "common": {
+      "delete": "حذف",
+      "warning": "تحذير!",
+      "cannotBeUndone": "لا يمكن التراجع عن هذا."
+    }
+  },
+  "contacts": {
+    "title": "إدارة الطلبات",
+    "description": "قم بادارة جميع طلبات التواصل في الجمعية مع امكانية اضافة طلب جديد",
+    "actions": {
+      "add": "إضافة طلب",
+      "filter": "تصفية طلبات التواصل...",
+      "view": "عرض"
+    },
+    "columns": {
+      "senderName": "اسم المرسل",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "subject": "الموضوع",
+      "sentDate": "تاريخ الإرسال",
+      "status": "الحالة"
+    },
+    "deleteContact": "حذف طلب التواصل",
+    "deleteConfirmQuestion": "هل أنت متأكد أنك تريد حذف طلب التواصل من",
+    "subjectLabel": "الموضوع:",
+    "senderNameLabel": "اسم المرسل:",
+    "enterSenderNamePlaceholder": "أدخل اسم المرسل لتأكيد الحذف.",
+    "deleteWarning": "الرجاء الانتباه، لا يمكن التراجع عن هذه العملية.",
+    "deletedMessage": "تم حذف طلب التواصل التالي:",
+    "common": {
+      "delete": "حذف",
+      "warning": "تحذير!",
+      "cannotBeUndone": "لا يمكن التراجع عن هذا الإجراء."
+    },
+    "reply": {
+      "title": "الرد على طلب التواصل",
+      "prefix": "رد:",
+      "description": "إرسال رد إلى {{name}} على البريد {{email}}",
+      "subject": "الموضوع",
+      "subjectPlaceholder": "موضوع الرد",
+      "message": "الرسالة",
+      "messagePlaceholder": "اكتب ردك هنا...",
+      "sendButton": "إرسال الرد",
+      "successMessage": "تم إرسال الرد بنجاح:"
+    },
+    "contact": {
+      "detailsTitle": "تفاصيل طلب الاتصال",
+      "detailsDescription": "عرض جميع معلومات طلب الاتصال",
+      "sent": "أُرسل",
+      "sender": "المرسل",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "replied": "تم الرد",
+      "subject": "الموضوع",
+      "message": "الرسالة"
+    }
+  },
+  "donations": {
+    "title": "إدارة التبرعات",
+    "description": "قم بادارة جميع التبرعات في الجمعية مع امكانية اضافة تبرع جديد",
+    "actions": {
+      "add": "إضافة تبرع",
+      "filter": "تصفية التبرعات...",
+      "view": "عرض"
+    },
+    "filters": {
+      "status": "الحالة",
+      "donationType": "نوع التبرع",
+      "paymentMethod": "طريقة الدفع"
+    },
+    "columns": {
+      "id": "م",
+      "donor": "المتبرع",
+      "donationType": "نوع التبرع",
+      "amount": "المبلغ",
+      "paymentMethod": "طريقة الدفع",
+      "date": "التاريخ",
+      "status": "الحالة",
+      "actions": "إجراءات"
+    },
+    "form": {
+      "add": "إضافة تبرع",
+      "edit": "تعديل التبرع",
+      "update": "تحديث التبرع",
+      "createNew": "سجل تبرعًا جديدًا هنا. اضغط حفظ عند الانتهاء.",
+      "updateExisting": "قم بتحديث بيانات التبرع هنا. اضغط حفظ عند الانتهاء.",
+      "fields": {
+        "donorName": "اسم المتبرع",
+        "donorNamePlaceholder": "أحمد بن علي",
+        "donorEmail": "البريد الإلكتروني",
+        "donorEmailPlaceholder": "ahmed@email.com",
+        "amount": "المبلغ",
+        "amountPlaceholder": "5000",
+        "currency": "العملة",
+        "currencyPlaceholder": "دج",
+        "donationType": "نوع التبرع",
+        "donationTypePlaceholder": "اختر نوع التبرع",
+        "paymentMethod": "طريقة الدفع",
+        "paymentMethodPlaceholder": "اختر طريقة الدفع",
+        "status": "الحالة",
+        "statusPlaceholder": "اختر الحالة",
+        "notes": "ملاحظات (اختياري)",
+        "notesPlaceholder": "ملاحظات إضافية حول التبرع..."
+      }
+    },
+    "deleteDonation": "حذف التبرع",
+    "deleteConfirmQuestion": "هل أنت متأكد أنك تريد حذف التبرع من",
+    "of": "بقيمة",
+    "donationId": "معرّف التبرع",
+    "enterDonationIdPlaceholder": "أدخل معرّف التبرع لتأكيد الحذف.",
+    "deleteWarning": "الرجاء الانتباه، هذه العملية لا يمكن التراجع عنها.",
+    "deletedMessage": "تم حذف التبرع التالي:",
+    "common": {
+      "delete": "حذف",
+      "warning": "تحذير!",
+      "cannotBeUndone": "لا يمكن التراجع عن هذا الإجراء."
+    }
+  },
+  "activities": {
+    "title": "إدارة الأنشطة",
+    "description": "قم بادارة جميع نشاطات الجمعية مع امكانية اضافة نشاطات جديدة",
+    "actions": {
+      "add": "إضافة نشاط",
+      "filter": "تصفية الأنشطة...",
+      "view": "عرض"
+    },
+    "filters": {
+      "status": "الحالة"
+    },
+    "columns": {
+      "activity": "النشاط",
+      "type": "النوع",
+      "state": "الحالة",
+      "date": "التاريخ",
+      "duration": "المدة",
+      "participants": "المشاركون",
+      "organizer": "المنظم",
+      "status": "الحالة",
+      "actions": "إجراءات"
+    },
+    "form": {
+      "addTitle": "إضافة نشاط",
+      "editTitle": "تعديل النشاط",
+      "addDescription": "املأ التفاصيل أدناه لإضافة نشاط جديد.",
+      "editDescription": "قم بتحديث تفاصيل النشاط أدناه.",
+      "fields": {
+        "title": "اسم النشاط",
+        "titlePlaceholder": "أدخل اسم النشاط هنا",
+        "state": "الولاية",
+        "statePlaceholder": "اختر الولاية",
+        "type": "نوع النشاط",
+        "typePlaceholder": "اختر نوع النشاط",
+        "description": "الوصف",
+        "descriptionPlaceholder": "أدخل وصف النشاط هنا",
+        "startDate": "تاريخ البداية",
+        "endDate": "تاريخ الانتهاء",
+        "branch": "الفرع",
+        "branchPlaceholder": "اختر الفرع",
+        "participants": "عدد المشاركين المتوقع",
+        "participantsPlaceholder": "أدخل عدد المشاركين المتوقع",
+        "image": "صورة النشاط"
+      },
+      "types": {
+        "workshop": "ورشة عمل",
+        "seminar": "ندوة",
+        "conference": "مؤتمر"
+      },
+      "branches": {
+        "branch1": "الفرع 1",
+        "branch2": "الفرع 2"
+      },
+      "actions": {
+        "add": "إضافة نشاط",
+        "update": "تحديث النشاط"
+      }
+    },
+    "deleteActivity": "حذف النشاط",
+    "deleteConfirmQuestion": "هل أنت متأكد أنك تريد حذف النشاط",
+    "deleteConfirmDetails": "سيؤدي هذا الإجراء إلى حذفه نهائيًا من:",
+    "category": "الفئة",
+    "branch": "الفرع",
+    "participants": "عدد المشاركين",
+    "startDate": "تاريخ البداية",
+    "endDate": "تاريخ الانتهاء",
+    "confirmByTitle": "أكد بكتابة عنوان النشاط:",
+    "enterTitlePlaceholder": "أدخل عنوان النشاط لتأكيد الحذف.",
+    "deleteWarning": "لا يمكن التراجع عن هذه العملية. يرجى التأكد قبل المتابعة.",
+    "deletedMessage": "تم حذف النشاط التالي:",
+    "common": {
+      "delete": "حذف",
+      "warning": "تحذير!"
+    }
+  },
+  "campaigns": {
+    "title-2": "ادارة التطوع",
+    "title": "إدارة الحملات",
+    "description": "قم بادارة جميع حملات التطوع مع امكانية اضافة حملات جديدة",
+    "actions": {
+      "add": "إضافة حملة",
+      "filter": "تصفية الحملات...",
+      "view": "عرض"
+    },
+    "filters": {
+      "status": "الحالة"
+    },
+    "columns": {
+      "title": "عنوان الحملة",
+      "state": "الولاية",
+      "startDate": "تاريخ البداية",
+      "endDate": "تاريخ الانتهاء",
+      "status": "الحالة",
+      "volunteers": "المتطوعون",
+      "actions": "إجراءات"
+    },
+    "form": {
+      "addTitle": "إضافة حملة",
+      "editTitle": "تعديل الحملة",
+      "addDescription": "قم بإنشاء حملة تطوعية جديدة هنا. اضغط حفظ عند الانتهاء.",
+      "editDescription": "قم بتحديث تفاصيل الحملة التطوعية هنا. اضغط حفظ عند الانتهاء.",
+      "campaignName": "اسم الحملة",
+      "campaignNamePlaceholder": "حملة تنظيف الشاطئ",
+      "category": "الفئة",
+      "categoryPlaceholder": "اختر الفئة",
+      "status": "الحالة",
+      "statusPlaceholder": "اختر الحالة",
+      "state": "الولاية",
+      "statePlaceholder": "اختر الولاية",
+      "requirements": "تفاصيل الحملة",
+      "requirementsPlaceholder": "لياقة بدنية، أحضر قفازاتك وزجاجة ماء...",
+      "startDate": "تاريخ البدء",
+      "endDate": "تاريخ الانتهاء",
+      "volunteersNeeded": "عدد المتطوعين المطلوب",
+      "image": "صورة الحملة",
+      "addButton": "إضافة الحملة",
+      "updateButton": "تحديث الحملة"
+    },
+    "volunteerCampaign": {
+      "deleteTitle": "حذف الحملة",
+      "deleteSuccess": "تم حذف الحملة التطوعية التالية:",
+      "deleteConfirmQuestion": "هل أنت متأكد أنك تريد حذف",
+      "deleteConfirmCategory": "سيؤدي هذا الإجراء إلى إزالة الحملة التطوعية نهائيًا من قسم",
+      "enterSlugLabel": "المعرف (Slug) للحملة:",
+      "enterSlugPlaceholder": "أدخل معرف الحملة لتأكيد الحذف.",
+      "deleteWarning": "يرجى الانتباه، لا يمكن التراجع عن هذه العملية."
+    },
+    "common": {
+      "delete": "حذف",
+      "warning": "تحذير!"
+    }
+  },
+  "volunteerRequests": {
+    "title": "إدارة طلبات المتطوعين",
+    "description": "قم بادارة جميع طلبات التطوع مع امكانية اضافة طلبات جديدة",
+    "actions": {
+      "add": "إضافة طلب متطوع",
+      "filter": "تصفية المتطوعين...",
+      "view": "عرض"
+    },
+    "filters": {
+      "status": "الحالة",
+      "campaign": "الحملة"
+    },
+    "columns": {
+      "id": "الرقم",
+      "volunteer": "المتطوع",
+      "email": "البريد الإلكتروني",
+      "phoneNumber": "رقم الهاتف",
+      "campaign": "الحملة",
+      "skills": "المهارات",
+      "applicationDate": "تاريخ التقديم",
+      "status": "الحالة",
+      "actions": "إجراءات"
+    },
+    "form": {
+      "addTitle": "إضافة طلب متطوع",
+      "editTitle": "تعديل طلب متطوع",
+      "addDescription": "أنشئ طلب متطوع جديد هنا. اضغط حفظ عند الانتهاء.",
+      "editDescription": "قم بتحديث طلب المتطوع هنا. اضغط حفظ عند الانتهاء.",
+      "volunteerName": "اسم المتطوع",
+      "volunteerNamePlaceholder": "أحمد بن علي",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "ahmed@email.com",
+      "phone": "رقم الهاتف",
+      "phonePlaceholder": "0555xxxxxx",
+      "campaign": "الحملة",
+      "campaignPlaceholder": "اختر حملة",
+      "status": "الحالة",
+      "statusPlaceholder": "اختر حالة",
+      "skills": "المهارات",
+      "skillsPlaceholder": "تنظيم، تواصل، قيادة...",
+      "addButton": "إضافة الطلب",
+      "updateButton": "تحديث الطلب"
+    },
+    "volunteerRequest": {
+      "deleteTitle": "حذف طلب التطوع",
+      "deleteSuccess": "تم حذف طلب التطوع التالي:",
+      "deleteConfirmQuestion": "هل أنت متأكد أنك تريد حذف الطلب من",
+      "deleteConfirmCampaign": "سيؤدي هذا الإجراء إلى إزالة طلب التطوع نهائيًا لحملة",
+      "enterNameLabel": "اسم المتطوع:",
+      "enterNamePlaceholder": "أدخل اسم المتطوع لتأكيد الحذف.",
+      "deleteWarning": "يرجى الانتباه، لا يمكن التراجع عن هذه العملية."
+    },
+    "common": {
+      "delete": "حذف",
+      "warning": "تحذير!"
+    }
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "description": "قم بإدارة إعدادات حسابك وتحديد تفضيلات البريد الإلكتروني.",
+    "fields": {
+      "fullName": "أدخل اسمك الكامل",
+      "email": "أدخل بريدك الإلكتروني",
+      "password": "********",
+      "description": "أدخل الوصف"
+    },
+    "actions": {
+      "updateProfile": "تحديث الملف الشخصي"
+    },
+    "fullName": " اسمك الكامل",
+    "email": " بريدك الإلكتروني",
+    "password": "كلمة المرور",
+    "descriptions": " الوصف"
+  },
+  "offices": {
+    "title": "إدارة المكاتب والفروع",
+    "description": "قم بادارة جميع مكاتب و فروع الجمعية مع امكانية اضافة فروع جديدة",
+    "actions": {
+      "add": "إضافة مكتب",
+      "filter": "تصفية المكاتب...",
+      "view": "عرض"
+    },
+    "filters": {
+      "status": "الحالة",
+      "type": "النوع"
+    },
+    "columns": {
+      "office": "المكتب",
+      "type": "النوع",
+      "state": "الحالة",
+      "address": "العنوان",
+      "phoneNumber": "رقم الهاتف",
+      "email": "البريد الإلكتروني",
+      "status": "الحالة",
+      "actions": "إجراءات"
+    },
+    "form": {
+      "addTitle": "إضافة مكتب",
+      "editTitle": "تعديل المكتب",
+      "addDescription": "أنشئ مكتبًا جديدًا هنا. اضغط حفظ عند الانتهاء.",
+      "editDescription": "قم بتحديث تفاصيل المكتب هنا. اضغط حفظ عند الانتهاء.",
+
+      "name": "اسم المكتب",
+      "namePlaceholder": "المكتب الرئيسي وسط المدينة",
+
+      "code": "رمز المكتب",
+      "codePlaceholder": "OFF123",
+
+      "type": "النوع",
+      "typePlaceholder": "اختر نوع المكتب",
+
+      "status": "الحالة",
+      "statusPlaceholder": "اختر الحالة",
+
+      "state": "الولاية",
+      "statePlaceholder": "اختر الولاية",
+
+      "address": "العنوان",
+      "addressPlaceholder": "123 شارع رئيسي، المدينة، الولاية 12345",
+
+      "phone": "رقم الهاتف",
+      "phonePlaceholder": "+213 555 123 456",
+
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "office@company.com",
+
+      "manager": "اسم المدير",
+      "managerPlaceholder": "محمد أحمد",
+
+      "capacity": "الطاقة الاستيعابية",
+      "capacityPlaceholder": "100",
+
+      "description": "الوصف",
+      "descriptionPlaceholder": "ملاحظات أو وصف إضافي...",
+
+      "addButton": "إضافة مكتب",
+      "updateButton": "تحديث المكتب"
+    },
+    "office": {
+      "deleteTitle": "حذف المكتب",
+      "deleteSuccess": "تم حذف المكتب التالي:",
+      "deleteConfirmQuestion": "هل أنت متأكد أنك تريد حذف",
+      "deleteConfirmCategory": "سيؤدي هذا الإجراء إلى إزالة المكتب نهائيًا من قسم",
+      "enterCodeLabel": "رمز المكتب:",
+      "enterCodePlaceholder": "أدخل رمز المكتب لتأكيد الحذف.",
+      "deleteWarning": "يرجى الانتباه، لا يمكن التراجع عن هذه العملية."
+    },
+    "common": {
+      "delete": "حذف",
+      "warning": "تحذير!"
+    }
+  },
+  "roles": {
+    "title": "إدارة الأدوار",
+    "description": "قم بادارة جميع صلاحيات المستخدمين مع اضافة صلاحيات جديدة",
+    "actions": {
+      "add": "إضافة دور",
+      "filter": "تصفية الأدوار...",
+      "view": "عرض"
+    },
+    "columns": {
+      "priority": "الأولوية",
+      "roleName": "اسم الدور",
+      "users": "المستخدمون",
+      "permissions": "الصلاحيات",
+      "lastUpdated": "آخر تحديث",
+      "actions": "إجراءات"
+    },
+    "form": {
+      "addTitle": "إضافة دور",
+      "editTitle": "تعديل الدور",
+      "addDescription": "أنشئ دورًا جديدًا هنا. اضغط حفظ عند الانتهاء.",
+      "editDescription": "قم بتحديث الدور هنا. اضغط حفظ عند الانتهاء.",
+
+      "name": "اسم الدور",
+      "namePlaceholder": "مدير، محرر، عارض",
+
+      "permissions": "الصلاحيات",
+      "permissionsPlaceholder": "اختر الصلاحيات...",
+
+      "users": "المستخدمون",
+      "usersPlaceholder": "اختر المستخدمين...",
+
+      "addButton": "إضافة دور",
+      "updateButton": "تحديث الدور"
+    },
+    "role": {
+      "deleteTitle": "حذف الدور",
+      "deleteSuccess": "تم حذف الدور التالي:",
+      "deleteConfirmQuestion": "هل أنت متأكد أنك تريد حذف الدور",
+      "deleteConfirmCategory": "سيؤدي هذا الإجراء إلى إزالة الدور من النوع",
+      "enterNameLabel": "اسم الدور:",
+      "enterNamePlaceholder": "أدخل اسم الدور لتأكيد الحذف.",
+      "deleteWarning": "يرجى الانتباه، لا يمكن التراجع عن هذه العملية."
+    },
+    "common": {
+      "delete": "حذف",
+      "warning": "تحذير!"
+    }
+  },
+  "Categories": {
+    "title": " إدارة الفئات",
+    "description": "إضافة أو تعديل أو حذف الفئات لإبقاء الجميع على اطلاع دائم.",
+    "actions": {
+      "add": "إضافة فئة",
+      "filter": "تصفية الفئات...",
+      "view": "عرض"
+    },
+    "filters": {
+      "status": "الحالة"
+    },
+    "columns": {
+      "id": "الرقم",
+      "categoryName": "اسم الفئة",
+      "description": "الوصف",
+      "activitiesCount": "عدد الأنشطة",
+      "status": "الحالة",
+      "actions": "إجراءات"
+    },
+    "form": {
+      "editTitle": "تعديل الفئة",
+      "addTitle": "إضافة فئة",
+      "editDescription": "قم بتحديث الفئة هنا.",
+      "addDescription": "أنشئ فئة جديدة هنا. اضغط حفظ عند الانتهاء.",
+      "nameEn": "الاسم (EN)",
+      "nameEnPlaceholder": "أنشطة تعليمية",
+      "nameAr": "الاسم (AR)",
+      "nameArPlaceholder": "أنشطة تعليمية",
+      "descriptionEn": "الوصف (EN)",
+      "descriptionEnPlaceholder": "أنشطة تهدف إلى دعم التعليم والتوعية",
+      "descriptionAr": "الوصف (AR)",
+      "descriptionArPlaceholder": "أنشطة تهدف إلى دعم التعليم والتوعية",
+      "status": "الحالة",
+      "statusPlaceholder": "اختر الحالة",
+      "updateButton": "تحديث",
+      "addButton": "إضافة جديدة",
+      "errors": {
+        "nameRequired": "اسم الفئة مطلوب.",
+        "nameTooLong": "الاسم طويل جدًا.",
+        "nameArabicRequired": "الاسم بالعربية مطلوب.",
+        "nameArabicTooLong": "الاسم بالعربية طويل جدًا.",
+        "descriptionRequired": "الوصف مطلوب.",
+        "descriptionTooLong": "الوصف طويل جدًا.",
+        "descriptionArabicRequired": "الوصف بالعربية مطلوب.",
+        "descriptionArabicTooLong": "الوصف بالعربية طويل جدًا.",
+        "statusRequired": "الحالة مطلوبة.",
+        "activitiesCountNonNegative": "عدد الأنشطة لا يمكن أن يكون سالبًا."
+      }
+    },
+    "deleteDialogs": {
+      "office": {
+        "title": "حذف المكتب",
+        "confirmQuestion": "هل أنت متأكد أنك تريد حذف",
+        "confirmCategory": "سيؤدي هذا الإجراء إلى إزالة المكتب نهائيًا من",
+        "enterCodePlaceholder": "أدخل رمز المكتب لتأكيد الحذف.",
+        "deletedMessage": "تم حذف المكتب التالي:"
+      },
+      "role": {
+        "title": "حذف الدور",
+        "confirmQuestion": "هل أنت متأكد أنك تريد حذف الدور",
+        "confirmCategory": "سيؤدي هذا الإجراء إلى إزالة الدور من النوع",
+        "enterNamePlaceholder": "أدخل اسم الدور لتأكيد الحذف.",
+        "deletedMessage": "تم حذف الدور التالي:"
+      },
+      "category": {
+        "title": "حذف الفئة",
+        "confirmQuestion": "هل أنت متأكد أنك تريد حذف",
+        "confirmCategory": "سيؤدي هذا الإجراء إلى إزالة الفئة نهائيًا والتأثير على",
+        "enterNamePlaceholder": "أدخل اسم الفئة لتأكيد الحذف.",
+        "deletedMessage": "تم حذف الفئة التالية:"
+      },
+      "common": {
+        "warning": "تحذير!",
+        "cannotBeUndone": "لا يمكن التراجع عن هذا.",
+        "delete": "حذف",
+        "deleteWarning": "يرجى الحذر، لا يمكن التراجع عن هذه العملية."
+      }
+    }
+  },
+  "media": {
+    "editTitle": "تعديل ملف الوسائط",
+    "uploadTitle": "رفع ملف وسائط",
+    "editDesc": "قم بتحديث تفاصيل ملف الوسائط هنا. اضغط على حفظ عند الانتهاء.",
+    "uploadDesc": "قم برفع ملف الوسائط وإعداده هنا. اضغط على حفظ عند الانتهاء.",
+    "file": "الملف",
+    "preview": "معاينة",
+    "filename": "اسم الملف",
+    "displayName": "الاسم المعروض",
+    "displayNamePH": "لافتة الحملة 1",
+    "category": "الفئة",
+    "categoryPH": "اختر فئة",
+    "alt": "النص البديل",
+    "altPH": "نص وصفي لتحسين الوصول",
+    "description": "الوصف",
+    "descriptionPH": "وصف الملف...",
+    "tags": "الوسوم",
+    "tagsPH": "حملة، لافتة، ترويج",
+    "upload": "رفع",
+    "update": "تحديث",
+    "mediaTable": {
+      "preview": "معاينة",
+      "filename": "اسم الملف",
+      "type": "النوع",
+      "size": "الحجم",
+      "category": "الفئة",
+      "uploadedBy": "تم الرفع بواسطة",
+      "uploadDate": "تاريخ الرفع",
+      "actions": "إجراءات",
+      "selectAll": "تحديد الكل",
+      "selectRow": "تحديد الصف"
+    },
+    "mediaDelete": {
+      "title": "حذف ملف وسائط",
+      "desc": "هل أنت متأكد أنك تريد حذف {name}؟ هذا الإجراء سيؤدي إلى إزالة الملف نهائيًا من فئة {category}. لا يمكن التراجع عن هذا الإجراء.",
+      "filenameLabel": "اسم الملف",
+      "filenamePlaceholder": "أدخل اسم الملف لتأكيد الحذف.",
+      "warningTitle": "تحذير!",
+      "warningDesc": "يرجى توخي الحذر، لا يمكن التراجع عن هذا الإجراء.",
+      "confirmText": "حذف"
+    },
+    "mediaView": {
+      "title": "تفاصيل ملف الوسائط",
+      "desc": "عرض معلومات ملف الوسائط وتحميله",
+      "filename": "اسم الملف",
+      "displayName": "الاسم المعروض",
+      "fileSize": "حجم الملف",
+      "fileType": "نوع الملف",
+      "uploadedBy": "تم التحميل بواسطة",
+      "uploadDate": "تاريخ التحميل",
+      "category": "الفئة",
+      "tags": "الوسوم",
+      "description": "الوصف",
+      "download": "تحميل"
+    },
+    "mediaPage": {
+      "title": "إدارة الوسائط",
+      "desc": "أضف، عدل، أو احذف ملفات الوسائط للحفاظ على تنظيم كل شيء.",
+      "add": "إضافة وسيط"
+    }
+  },
+  "pageDialog": {
+    "addTitle": "إضافة صفحة",
+    "editTitle": "تعديل الصفحة",
+    "addDesc": "أنشئ صفحة جديدة هنا. اضغط حفظ عند الانتهاء.",
+    "editDesc": "قم بتحديث الصفحة هنا. اضغط حفظ عند الانتهاء.",
+    "title": "العنوان",
+    "titlePH": "من نحن",
+    "url": "رابط URL",
+    "urlPH": "/about",
+    "description": "الوصف",
+    "descriptionPH": "وصف مختصر للصفحة",
+    "status": "الحالة",
+    "statusPH": "اختر الحالة",
+    "metaTitle": "عنوان ميتا",
+    "metaTitlePH": "عنوان SEO",
+    "metaDescription": "وصف ميتا",
+    "metaDescriptionPH": "وصف SEO",
+    "content": "المحتوى",
+    "contentPH": "المحتوى الكامل للصفحة...",
+    "addBtn": "إضافة الصفحة",
+    "editBtn": "حفظ التغييرات",
+    "table": {
+      "selectAll": "تحديد الكل",
+      "selectRow": "تحديد الصف",
+      "pageTitle": "عنوان الصفحة",
+      "url": "الرابط",
+      "description": "الوصف",
+      "status": "الحالة",
+      "createdDate": "تاريخ الإنشاء",
+      "filter": "تصفية صفحات..."
+    },
+    "statustype": {
+      "draft": "مسودة",
+      "published": "منشور",
+      "unpublished": "مؤرشف"
+    },
+    "pageDelete": {
+      "title": "حذف الصفحة",
+      "confirmTextBefore": "هل أنت متأكد من رغبتك بحذف",
+      "confirmTextAfter": "سيتم حذف الصفحة ذات الرابط",
+      "cannotUndo": "لا يمكن التراجع عن هذا الإجراء.",
+      "urlLabel": "رابط الصفحة",
+      "urlPlaceholder": "أدخل رابط الصفحة لتأكيد الحذف",
+      "warningTitle": "تنبيه!",
+      "warningDesc": "يرجى توخي الحذر، لا يمكن التراجع عن هذا الإجراء.",
+      "confirmBtn": "حذف",
+      "deletedMessage": "تم حذف الصفحة التالية:"
+    },
+    "pages": {
+      "title": "إدارة الصفحات",
+      "description": "أضف أو عدل أو احذف الصفحات للحفاظ على تنظيم موقعك."
+    }
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "download": "تحميل",
+    "tabs": {
+      "overview": "نظرة عامة",
+      "analytics": "التحليلات",
+      "reports": "التقارير",
+      "notifications": "الإشعارات"
+    },
+    "cards": {
+      "totalDonations": "إجمالي التبرعات",
+      "totalDonationsChange": "+20.1٪ عن الشهر الماضي",
+      "projects": "عدد المشاريع",
+      "projectsChange": "بانتظار الموافقة   ",
+      "volunteers": "عدد المتطوعين",
+      "volunteersChange": " متطوع جديدًا  ",
+      "activities": "عدد الأنشطة",
+      "activitiesChange": "  أنشطة قادمة خلال اسبوع"
+    },
+    "charts": {
+      "monthDonations": "تبرعات الشهر",
+      "monthDonationsDesc": "إحصائيات تبين قيمة التبرعات التي استلمتها الجمعية كل شهر",
+      "recentDonations": "أحدث التبرعات",
+      "recentDonationsDesc": "تم تقديم 256 تبرعًا للجمعية هذا الشهر"
+    },
+    "nav": {
+      "overview": "نظرة عامة",
+      "customers": "العملاء",
+      "products": "المنتجات",
+      "settings": "الإعدادات"
+    }
+  },
+  "topbar": {
+    "title": "الشريط العلوي",
+    "desc": "قم بادارة الشريط العلوي لموقع الجمعية مع امكانية اضافة عناصر جديد",
+    "form": {
+      "addTitle": "إضافة عنصر",
+      "editTitle": "تعديل العنصر",
+      "addDescription": "قم بإنشاء عنصر جديد في شريط التنقل. اضغط حفظ عند الانتهاء.",
+      "editDescription": "قم بتحديث عنصر شريط التنقل. اضغط حفظ عند الانتهاء.",
+      "name": "اسم العنصر",
+      "namePlaceholder": "الرئيسية",
+      "url": "الرابط",
+      "urlPlaceholder": "/الرئيسية",
+      "order": "الترتيب",
+      "orderPlaceholder": "1",
+      "status": "الحالة",
+      "statusPlaceholder": "اختر الحالة",
+      "addButton": "إضافة عنصر",
+      "updateButton": "حفظ التغييرات"
+    },
+    "table": {
+      "itemName": "اسم العنصر",
+      "url": "الرابط",
+      "order": "الترتيب",
+      "status": "الحالة",
+      "lastModified": "آخر تعديل"
+    },
+    "common": {
+      "selectAll": "تحديد الكل",
+      "selectRow": "تحديد الصف",
+      "filter": "تصفية العنصر..."
+    },
+    "statuses": {
+      "active": "نشط",
+      "inactive": "غير نشط",
+      "draft": "مسودة"
+    },
+    "deleteDialog": {
+      "title": "حذف العنصر",
+      "confirmMessage": "هل أنت متأكد أنك تريد حذف",
+      "warningText": "هذا الإجراء سيؤدي إلى إزالة عنصر التنقل نهائيًا. لا يمكن التراجع عن هذا.",
+      "itemName": "اسم العنصر:",
+      "placeholder": "أدخل اسم العنصر لتأكيد الحذف.",
+      "alertTitle": "تحذير!",
+      "alertDescription": "يرجى الانتباه، لا يمكن التراجع عن هذه العملية.",
+      "confirmButton": "حذف",
+      "deletedMessage": "تم حذف العنصر التالي:"
+    }
+  }
+}

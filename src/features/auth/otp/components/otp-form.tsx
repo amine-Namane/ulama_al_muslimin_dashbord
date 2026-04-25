@@ -2,8 +2,7 @@ import { useState } from 'react'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useNavigate } from '@tanstack/react-router'
-import { showSubmittedData } from '@/lib/show-submitted-data'
+import { useNavigate, useSearch } from '@tanstack/react-router'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import {
@@ -20,7 +19,9 @@ import {
   InputOTPSlot,
   InputOTPSeparator,
 } from '@/components/ui/input-otp'
+import { useVerifyOtp } from '@/hooks/useAuth'  
 
+// ✅ Form validation schema
 const formSchema = z.object({
   otp: z
     .string()
@@ -32,24 +33,35 @@ type OtpFormProps = React.HTMLAttributes<HTMLFormElement>
 
 export function OtpForm({ className, ...props }: OtpFormProps) {
   const navigate = useNavigate()
-  const [isLoading, setIsLoading] = useState(false)
+  const search = useSearch({ from: '/(auth)/otp' })
+  const [email] = useState(search.email || '') // ✅ get email from URL
+  const verifyOtp = useVerifyOtp() // ✅ use the mutation hook
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: { otp: '' },
   })
 
-  // eslint-disable-next-line react-hooks/incompatible-library
   const otp = form.watch('otp')
 
-  function onSubmit(data: z.infer<typeof formSchema>) {
-    setIsLoading(true)
-    showSubmittedData(data)
-
-    setTimeout(() => {
-      setIsLoading(false)
-      navigate({ to: '/' })
-    }, 1000)
+  // ✅ handle form submit
+  async function onSubmit(data: z.infer<typeof formSchema>) {
+    verifyOtp.mutate(
+      { email, code: data.otp },
+      {
+        onSuccess: (response) => {
+          if (response.status) {
+            // ✅ if OTP is correct
+            navigate({ to: '/reset-password', search: { email , otp } })
+          } else {
+            alert(response.message || 'Invalid OTP.')
+          }
+        },
+        onError: () => {
+          alert('Verification failed. Please try again.')
+        },
+      }
+    )
   }
 
   return (
@@ -91,8 +103,12 @@ export function OtpForm({ className, ...props }: OtpFormProps) {
             </FormItem>
           )}
         />
-        <Button className='mt-2' disabled={otp.length < 6 || isLoading}>
-          Verify
+        <Button
+          type='submit'
+          className='mt-2 bg-[#095555]'
+          disabled={otp.length < 6 || verifyOtp.isPending}
+        >
+          {verifyOtp.isPending ? 'Verifying...' : 'Verify'}
         </Button>
       </form>
     </Form>

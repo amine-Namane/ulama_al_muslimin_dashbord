@@ -1,0 +1,1059 @@
+{
+  "users": {
+    "title": "Users Management",
+    "description": "Manage all users and view their data",
+    "actions": {
+      "add": "Add Item",
+      "filter": "Filter users...",
+      "view": "View",
+      "deleteUser": "Delete User"
+    },
+    "deleteConfirmQuestion": "Are you sure you want to delete",
+    "deleteConfirmRole": "This action will permanently remove the user with the role of",
+    "usernameLabel": "Username:",
+    "enterUsernamePlaceholder": "Enter username to confirm deletion.",
+    "deleteWarning": "Please be careful, this operation can not be rolled back.",
+    "deletedMessage": "The following user has been deleted:",
+    "columns": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "role": "Role",
+      "status": "Status"
+    },
+    "deleteConfirmation": {
+      "title": "Are you sure?",
+      "description": "This action will permanently delete",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    },
+    "edit": "Edit",
+    "delete": "Delete",
+    "deleteSelected": "Delete Selected",
+    "clearSelection": "Clear Selection",
+    "openMenu": "Open menu",
+    "userForm": {
+      "add": "Add User",
+      "edit": "Edit User",
+      "editDescription": "Update user information.",
+      "addDescription": "Add a new user to the system.",
+      "createNew": "Create new user here.",
+      "update": "Update",
+      "clickSave": "Click save when you're done.",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "John",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Doe",
+      "username": "Username",
+      "usernamePlaceholder": "johndoe123",
+      "email": "Email",
+      "emailPlaceholder": "john.doe@gmail.com",
+      "phoneNumber": "Phone Number",
+      "phoneNumberPlaceholder": "+123456789",
+      "role": "Role",
+      "selectRole": "Select a role",
+      "password": "Password",
+      "passwordPlaceholder": "e.g., S3cur3P@ssw0rd",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Re-enter password",
+      "saveChanges": "Save Changes",
+      "addBtn": "Add User"
+    },
+    "common": {
+      "delete": "Delete",
+      "warning": "Warning!",
+      "cannotBeUndone": "This cannot be undone.",
+      "noResults": "No results found."
+    }
+  },
+
+  "students": {
+    "title": "Students Management",
+    "description": "Manage all students and view their data",
+    "actions": {
+      "add": "Add Student",
+      "filter": "Filter students...",
+      "view": "View"
+    },
+    "columns": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "grade": "Grade",
+      "status": "Status",
+      "gender": "Gender",
+      "birthDate": "Birth Date",
+      "city": "City",
+      "wilaya": "Wilaya",
+      "halqa": "Halqa",
+      "memorizedJuz": "Memorized Juz",
+      "guardianName": "Guardian Name",
+      "guardianPhone": "Guardian Phone"
+    },
+    "grade": "Grade",
+    "gender": "Gender",
+    "birthDate": "Birth Date",
+    "city": "City",
+    "wilaya": "Wilaya",
+    "halqa": "Halqa",
+    "memorizedJuz": "Memorized Juz",
+    "guardianName": "Guardian Name",
+    "guardianPhone": "Guardian Phone",
+    "address": "Address",
+    "previousExperience": "Previous Experience",
+    "learningGoals": "Learning Goals",
+    "personalInfo": "Personal Information",
+    "contactInfo": "Contact Information",
+    "academicInfo": "Academic Information",
+    "guardianInfo": "Guardian Information",
+    "enrollmentDate": "Enrollment Date",
+    "deleteConfirmation": {
+      "title": "Are you sure?",
+      "description": "This action will permanently delete",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    }
+  },
+
+  "teachers": {
+    "title": "Teachers Management",
+    "description": "Manage all teachers and view their data",
+    "actions": {
+      "add": "Add Teacher",
+      "filter": "Filter teachers...",
+      "view": "View"
+    },
+    "columns": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "specialization": "Specialization",
+      "status": "Status"
+    },
+    "specialization": "Specialization",
+    "gender": "Gender",
+    "birthDate": "Birth Date",
+    "city": "City",
+    "wilaya": "Wilaya",
+    "experience": "Years of Experience",
+    "certification": "Certification",
+    "availability": "Availability",
+    "assignedHalqas": "Assigned Halqas",
+    "address": "Address",
+    "notes": "Notes",
+    "personalInfo": "Personal Information",
+    "contactInfo": "Contact Information",
+    "professionalInfo": "Professional Information",
+    "additionalInfo": "Additional Information",
+    "enrollmentDate": "Hire Date",
+    "deleteConfirmation": {
+      "title": "Are you sure?",
+      "description": "This action will permanently delete",
+      "cancel": "Cancel",
+      "delete": "Delete"
+    }
+  },
+
+  "sidebar": {
+    "general": "General",
+    "dashboard": "Dashboard",
+    "websiteContent": "Website Content",
+    "topBar": "Top Bar",
+    "pageManagement": "Page Management",
+    "mediaManagement": "Media Management",
+    "newsManagement": "News Management",
+    "projectManagement": "Project Management",
+    "fatwaManagement": "Fatwa Management",
+    "userManagement": "User Management",
+    "studentManagement": "Student Management",
+    "contactRequests": "Contact Requests",
+    "donationManagement": "Donation Management",
+    "activitiesManagement": "Activities Management",
+    "volunteerManagement": "Volunteer Management",
+    "volunteerCampaigns": "Volunteer Campaigns",
+    "volunteerRequests": "Volunteer Requests",
+    "other": "Other",
+    "settings": "Settings",
+    "generalSettings": "General Settings",
+    "officesBranches": "Offices and Branches",
+    "permissions": "Permissions",
+    "categoryManagement": "Category Management"
+  },
+
+  "newsTable": {
+    "title-2": "Website Content ",
+    "title": "News Management",
+    "desc": " Add, edit, or delete news to keep everyone constantly informed",
+
+    "columns": {
+      "id": "ID",
+      "title": "Title",
+      "category": "Category",
+      "status": "Status",
+      "author": "Author",
+      "date": "Date",
+      "actions": "Actions",
+      "content": "content"
+    },
+    "status": {
+      "draft": "Draft",
+      "published": "Published",
+      "archived": "Archived"
+    },
+    "actions": {
+      "view": "View",
+      "edit": "Edit",
+      "filter": "Filter news...",
+      "delete": "Delete",
+      "add": "Add News",
+      "reply": "Reply",
+      "accept": "Accept",
+      "rejected": "Reject",
+      "download": "Download"
+    },
+    "messages": {
+      "confirmDelete": "Are you sure you want to delete this news?",
+      "noData": "No news available"
+    },
+    "article": {
+      "title": "Article",
+      "createNew": "Create news here. Click save when you're done.",
+      "updateNew": "Update news here. Click save when you're done.",
+      "breakingNews": "Breaking News: Major Event Happening",
+      "author": "John Doe",
+      "selectCategory": "Select a category",
+      "selectStatus": "Select status",
+      "fullContent": "Full article content...",
+      "addNew": "Add New",
+      "updateNews": "  Update New"
+    },
+    "news": {
+      "title": "Title",
+      "category": "Category",
+      "author": "Author",
+      "publishedAt": "Published At",
+      "deleteArticle": "Delete Article",
+      "deleteConfirmQuestion": "Are you sure you want to delete",
+      "deleteConfirmCategory": "This action will permanently remove the article from the",
+      "articleSlug": "Article Slug",
+      "enterSlugPlaceholder": "Enter article slug to confirm deletion.",
+      "deleteWarning": "Please be careful, this operation can not be rolled back."
+    },
+    "common": {
+      "actions": "Actions",
+      "delete": "Delete",
+      "cancale": "cancale",
+      "warning": "Warning!",
+      "cannotBeUndone": "This cannot be undone.",
+      "selectAll": "Select all",
+      "selectRow": "Select row"
+    }
+  },
+  "projects": {
+    "title": "Projects Management",
+    "description": "Add, edit, or delete projects to keep everyone constantly informed.",
+    "actions": {
+      "add": "Add Item",
+      "filter": "Filter projects...",
+      "view": "View"
+    },
+    "columns": {
+      "name": "Project Name",
+      "type": "Type",
+      "state": "State",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "donations": "Collected Donations",
+      "beneficiaries": "Beneficiaries",
+      "status": "Status",
+      "description": "Project Description "
+    },
+    "project": {
+      "title": "Add Project",
+      "createNew": "Create new project here. Click save when you're done.",
+      "example": "E-commerce Website Redesign",
+      "selectType": "Select type",
+      "selectState": "Select state",
+      "details": "Detailed project requirements and specifications...",
+      "budget": "50000",
+      "teamSize": "100",
+      "filePlaceholder": "No file chosen",
+      "chooseFile": "Choose file",
+      "addNew": "Add Project",
+      "deleteProject": "Delete Project",
+      "deleteConfirmQuestion": "Are you sure you want to delete",
+      "deleteConfirmPriority": "This action will permanently remove the project with",
+      "projectSlug": "Project Slug",
+      "enterSlugPlaceholder": "Enter project slug to confirm deletion.",
+      "deleteWarning": "Please be careful, this operation can not be rolled back.",
+      "deletedMessage": "The following project has been deleted:"
+    },
+    "common": {
+      "delete": "Delete",
+      "warning": "Warning!",
+      "cannotBeUndone": "This cannot be undone."
+    }
+  },
+  "fatwas": {
+    "title": "Fatwa Management",
+    "description": "Add, edit, or delete fatwa ",
+    "actions": {
+      "add": "Add Item",
+      "filter": "Filter fatwas...",
+      "view": "View"
+    },
+    "columns": {
+      "title": "Title",
+      "scholar": "Scholar",
+      "category": "Category",
+      "status": "Status",
+      "created": "Created",
+      "actions": "Actions"
+    },
+    "fatwaForm": {
+      "add": "Add Fatwa",
+      "edit": "Edit Fatwa",
+      "createNew": "Create new fatwa here.",
+      "update": "Update the fatwa here.",
+      "clickSave": "Click save when you're done.",
+      "title": "Title",
+      "titlePlaceholder": "Ruling on Prayer During Travel",
+      "scholar": "Scholar",
+      "scholarPlaceholder": "Sheikh Muhammad ibn Salih al-Uthaymeen",
+      "category": "Category",
+      "selectCategory": "Select a category",
+      "status": "Status",
+      "selectStatus": "Select status",
+      "question": "Question",
+      "questionPlaceholder": "What is the ruling on...",
+      "answer": "Answer",
+      "answerPlaceholder": "The ruling is...",
+      "updateBtn": "Update Fatwa",
+      "addBtn": "Add Fatwa"
+    },
+    "fatwa": {
+      "deleteFatwa": "Delete Fatwa",
+      "deleteConfirmQuestion": "Are you sure you want to delete",
+      "deleteConfirmCategory": "This action will permanently remove the fatwa from the",
+      "fatwaId": "Fatwa ID",
+      "enterIdPlaceholder": "Enter fatwa ID to confirm deletion.",
+      "deleteWarning": "Please be careful, this operation can not be rolled back.",
+      "deletedMessage": "The following fatwa has been deleted:"
+    },
+    "common": {
+      "delete": "Delete",
+      "warning": "Warning!",
+      "cannotBeUndone": "This cannot be undone."
+    }
+  },
+  "contacts": {
+    "title": "Contacts Management",
+    "description": "Add, edit, or delete contact requests to keep everyone constantly informed.",
+    "actions": {
+      "add": "Add Item",
+      "filter": "Filter contact requests...",
+      "view": "View"
+    },
+
+    "columns": {
+      "senderName": "Sender Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "subject": "Subject",
+      "sentDate": "Sent Date",
+      "status": "Status"
+    },
+    "deleteContact": "Delete Contact Request",
+    "deleteConfirmQuestion": "Are you sure you want to delete the contact request from",
+    "subjectLabel": "Subject:",
+    "senderNameLabel": "Sender Name:",
+    "enterSenderNamePlaceholder": "Enter sender name to confirm deletion.",
+    "deleteWarning": "Please be careful, this operation cannot be rolled back.",
+    "deletedMessage": "The following contact request has been deleted:",
+    "common": {
+      "delete": "Delete",
+      "warning": "Warning!",
+      "cannotBeUndone": "This cannot be undone."
+    },
+    "reply": {
+      "title": "Reply to Contact Request",
+      "prefix": "Re:",
+      "description": "Send a reply to {{name}} at {{email}}",
+      "subject": "Subject",
+      "subjectPlaceholder": "Reply subject",
+      "message": "Message",
+      "messagePlaceholder": "Type your reply here...",
+      "sendButton": "Send Reply",
+      "successMessage": "Reply sent successfully:"
+    },
+    "contact": {
+      "detailsTitle": "Contact Request Details",
+      "detailsDescription": "View complete contact request information",
+      "sent": "Sent",
+      "sender": "Sender",
+      "email": "Email",
+      "phone": "Phone",
+      "replied": "Replied",
+      "subject": "Subject",
+      "message": "Message"
+    }
+  },
+  "donations": {
+    "title": "Donations Management",
+    "description": "Add, edit, or delete donations to keep everyone constantly informed.",
+    "actions": {
+      "add": "Add Item",
+      "filter": "Filter donations...",
+      "view": "View"
+    },
+    "filters": {
+      "status": "Status",
+      "donationType": "Donation Type",
+      "paymentMethod": "Payment Method"
+    },
+    "columns": {
+      "id": "#",
+      "donor": "Donor",
+      "donationType": "Donation Type",
+      "amount": "Amount",
+      "paymentMethod": "Payment Method",
+      "date": "Date",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "form": {
+      "add": "Add Donation",
+      "edit": "Edit Donation",
+      "update": "Update Donation",
+      "createNew": "Record new donation here. Click save when you're done.",
+      "updateExisting": "Update the donation here. Click save when you're done.",
+      "fields": {
+        "donorName": "Donor Name",
+        "donorNamePlaceholder": "Ahmed Ben Ali",
+        "donorEmail": "Email Address",
+        "donorEmailPlaceholder": "ahmed@email.com",
+        "amount": "Amount",
+        "amountPlaceholder": "5000",
+        "currency": "Currency",
+        "currencyPlaceholder": "DZD",
+        "donationType": "Donation Type",
+        "donationTypePlaceholder": "Select donation type",
+        "paymentMethod": "Payment Method",
+        "paymentMethodPlaceholder": "Select payment method",
+        "status": "Status",
+        "statusPlaceholder": "Select status",
+        "notes": "Notes (Optional)",
+        "notesPlaceholder": "Additional notes about the donation..."
+      }
+    },
+    "deleteDonation": "Delete Donation",
+    "deleteConfirmQuestion": "Are you sure you want to delete the donation from",
+    "of": "of",
+    "donationId": "Donation ID",
+    "enterDonationIdPlaceholder": "Enter donation ID to confirm deletion.",
+    "deleteWarning": "Please be careful, this operation can not be rolled back.",
+    "deletedMessage": "The following donation has been deleted:",
+    "common": {
+      "delete": "Delete",
+      "warning": "Warning!",
+      "cannotBeUndone": "This cannot be undone."
+    }
+  },
+  "activities": {
+    "title": "Activities Management",
+    "description": "Add, edit, or delete activities to keep everyone constantly informed.",
+    "actions": {
+      "add": "Add Item",
+      "filter": "Filter activities...",
+      "view": "View"
+    },
+    "filters": {
+      "status": "Status"
+    },
+    "columns": {
+      "activity": "Activity",
+      "type": "Type",
+      "state": "State",
+      "date": "Date",
+      "duration": "Duration",
+      "participants": "Participants",
+      "organizer": "Organizer",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "form": {
+      "addTitle": "Add Activity",
+      "editTitle": "Edit Activity",
+      "addDescription": "Fill in the details below to add a new activity.",
+      "editDescription": "Update the activity details below.",
+      "fields": {
+        "title": "Activity Name",
+        "titlePlaceholder": "Enter activity name here",
+        "state": "State",
+        "statePlaceholder": "Select state",
+        "type": "Activity Type",
+        "typePlaceholder": "Select activity type",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter activity description here",
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "branch": "Branch",
+        "branchPlaceholder": "Select a branch",
+        "participants": "Expected Participants",
+        "participantsPlaceholder": "Enter expected participants",
+        "image": "Activity Image"
+      },
+      "types": {
+        "workshop": "Workshop",
+        "seminar": "Seminar",
+        "conference": "Conference"
+      },
+      "branches": {
+        "branch1": "Branch 1",
+        "branch2": "Branch 2"
+      },
+      "actions": {
+        "add": "Add Activity",
+        "update": "Update Activity"
+      }
+    },
+    "deleteActivity": "Delete Activity",
+    "deleteConfirmQuestion": "Are you sure you want to delete activity",
+    "deleteConfirmDetails": "This action will permanently remove it from:",
+    "category": "Category",
+    "branch": "Branch",
+    "participants": "Participants",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "confirmByTitle": "Confirm by typing activity title:",
+    "enterTitlePlaceholder": "Enter activity title to confirm deletion.",
+    "deleteWarning": "This operation cannot be undone. Please be sure before confirming.",
+    "deletedMessage": "The following activity has been deleted:",
+    "common": {
+      "delete": "Delete",
+      "warning": "Warning!"
+    }
+  },
+  "campaigns": {
+    "title-2": " Volunteer Management",
+    "title": "Campaigns Management",
+    "description": "Add, edit, or delete campaigns to keep everyone constantly informed.",
+    "actions": {
+      "add": "Add Campaign",
+      "filter": "Filter campaigns...",
+      "view": "View"
+    },
+    "filters": {
+      "status": "Status"
+    },
+    "columns": {
+      "title": "Campaign Title",
+      "state": "State",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "status": "Status",
+      "volunteers": "Volunteers",
+      "actions": "Actions"
+    },
+    "form": {
+      "addTitle": "Add Campaign",
+      "editTitle": "Edit Campaign",
+      "addDescription": "Create new volunteer campaign here. Click save when you're done.",
+      "editDescription": "Update the volunteer campaign here. Click save when you're done.",
+      "campaignName": "Campaign Name",
+      "campaignNamePlaceholder": "Beach Cleanup Volunteer Drive",
+      "category": "Category",
+      "categoryPlaceholder": "Select a category",
+      "status": "Status",
+      "statusPlaceholder": "Select status",
+      "state": "State",
+      "statePlaceholder": "Select state",
+      "requirements": "Campaign Details",
+      "requirementsPlaceholder": "Physical fitness, bring your own gloves and water bottle...",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "volunteersNeeded": "Volunteers Needed",
+      "image": "Campaign Image",
+      "addButton": "Add Campaign",
+      "updateButton": "Update Campaign"
+    },
+    "volunteerCampaign": {
+      "deleteTitle": "Delete Campaign",
+      "deleteSuccess": "The following volunteer campaign has been deleted:",
+      "deleteConfirmQuestion": "Are you sure you want to delete",
+      "deleteConfirmCategory": "This action will permanently remove the volunteer campaign from the",
+      "enterSlugLabel": "Campaign Slug:",
+      "enterSlugPlaceholder": "Enter campaign slug to confirm deletion.",
+      "deleteWarning": "Please be careful, this operation can not be rolled back."
+    },
+    "common": {
+      "delete": "Delete",
+      "warning": "Warning!"
+    }
+  },
+  "volunteerRequests": {
+    "title": "Volunteer Requests Management",
+    "description": "Add, edit, or delete volunteer requests to keep everyone constantly informed.",
+    "actions": {
+      "add": "Add Volunteer Request",
+      "filter": "Filter volunteers...",
+      "view": "View"
+    },
+    "filters": {
+      "status": "Status",
+      "campaign": "Campaign"
+    },
+    "columns": {
+      "id": "#",
+      "volunteer": "Volunteer",
+      "email": "Email",
+      "phoneNumber": "Phone Number",
+      "campaign": "Campaign",
+      "skills": "Skills",
+      "applicationDate": "Application Date",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "form": {
+      "addTitle": "Add Volunteer Request",
+      "editTitle": "Edit Volunteer Request",
+      "addDescription": "Create new volunteer request here. Click save when you're done.",
+      "editDescription": "Update the volunteer request here. Click save when you're done.",
+      "volunteerName": "Volunteer Name",
+      "volunteerNamePlaceholder": "Ahmed Ben Ali",
+      "email": "Email",
+      "emailPlaceholder": "ahmed@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "0555xxxxxx",
+      "campaign": "Campaign",
+      "campaignPlaceholder": "Select a campaign",
+      "status": "Status",
+      "statusPlaceholder": "Select status",
+      "skills": "Skills",
+      "skillsPlaceholder": "Organization, Communication, Leadership...",
+      "addButton": "Add Request",
+      "updateButton": "Update Request"
+    },
+    "volunteerRequest": {
+      "deleteTitle": "Delete Volunteer Request",
+      "deleteSuccess": "The following volunteer request has been deleted:",
+      "deleteConfirmQuestion": "Are you sure you want to delete the request from",
+      "deleteConfirmCampaign": "This action will permanently remove the volunteer request for the",
+      "enterNameLabel": "Volunteer Name:",
+      "enterNamePlaceholder": "Enter volunteer name to confirm deletion.",
+      "deleteWarning": "Please be careful, this operation can not be rolled back."
+    },
+    "common": {
+      "delete": "Delete",
+      "warning": "Warning!"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Manage your account settings and set e-mail preferences.",
+    "fields": {
+      "fullName": "Enter your full name",
+      "email": "Enter your email",
+      "password": "********",
+      "description": "Enter description"
+    },
+    "actions": {
+      "updateProfile": "Update Profile"
+    }
+  },
+  "offices": {
+    "title": "Offices and Branches Management",
+    "description": "Add, edit, or delete offices and branches to keep everyone constantly informed.",
+    "actions": {
+      "add": "Add Office",
+      "filter": "Filter offices...",
+      "view": "View"
+    },
+    "filters": {
+      "status": "Status",
+      "type": "Type"
+    },
+    "columns": {
+      "office": "Office",
+      "type": "Type",
+      "state": "State",
+      "address": "Address",
+      "phoneNumber": "Phone Number",
+      "email": "Email",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "form": {
+      "addTitle": "Add Office",
+      "editTitle": "Edit Office",
+      "addDescription": "Create a new office here. Click save when you're done.",
+      "editDescription": "Update the office details here. Click save when you're done.",
+
+      "name": "Office Name",
+      "namePlaceholder": "Main Office Downtown",
+
+      "code": "Office Code",
+      "codePlaceholder": "OFF123",
+
+      "type": "Type",
+      "typePlaceholder": "Select office type",
+
+      "status": "Status",
+      "statusPlaceholder": "Select status",
+
+      "state": "State",
+      "statePlaceholder": "Select state",
+
+      "address": "Address",
+      "addressPlaceholder": "123 Main St, City, State 12345",
+
+      "phone": "Phone",
+      "phonePlaceholder": "+1 (555) 123-4567",
+
+      "email": "Email",
+      "emailPlaceholder": "office@company.com",
+
+      "manager": "Manager",
+      "managerPlaceholder": "John Doe",
+
+      "capacity": "Capacity",
+      "capacityPlaceholder": "100",
+
+      "description": "Description",
+      "descriptionPlaceholder": "Additional notes or description...",
+
+      "addButton": "Add Office",
+      "updateButton": "Update Office"
+    },
+    "office": {
+      "deleteTitle": "Delete Office",
+      "deleteSuccess": "The following office has been deleted:",
+      "deleteConfirmQuestion": "Are you sure you want to delete",
+      "deleteConfirmCategory": "This action will permanently remove the office from the",
+      "enterCodeLabel": "Office Code:",
+      "enterCodePlaceholder": "Enter office code to confirm deletion.",
+      "deleteWarning": "Please be careful, this operation can not be rolled back."
+    },
+    "common": {
+      "delete": "Delete",
+      "warning": "Warning!"
+    }
+  },
+  "roles": {
+    "title": "Roles Management",
+    "description": "Add, edit, or delete roles to keep everyone constantly informed.",
+    "actions": {
+      "add": "Add Role",
+      "filter": "Filter roles...",
+      "view": "View"
+    },
+    "columns": {
+      "priority": "Priority",
+      "roleName": "Role Name",
+      "users": "Users",
+      "permissions": "Permissions",
+      "lastUpdated": "Last Updated",
+      "actions": "Actions"
+    },
+    "form": {
+      "addTitle": "Add Role",
+      "editTitle": "Edit Role",
+      "addDescription": "Create a new role here. Click save when you're done.",
+      "editDescription": "Update the role here. Click save when you're done.",
+
+      "name": "Role Name",
+      "namePlaceholder": "admin, editor, viewer",
+
+      "permissions": "Permissions",
+      "permissionsPlaceholder": "Select permissions...",
+
+      "users": "Users",
+      "usersPlaceholder": "Select users...",
+
+      "addButton": "Add Role",
+      "updateButton": "Update Role"
+    },
+    "role": {
+      "deleteTitle": "Delete Role",
+      "deleteSuccess": "The following role has been deleted:",
+      "deleteConfirmQuestion": "Are you sure you want to delete the role",
+      "deleteConfirmCategory": "This action will permanently remove the role of type",
+      "enterNameLabel": "Role Name:",
+      "enterNamePlaceholder": "Enter role name to confirm deletion.",
+      "deleteWarning": "Please be careful, this operation can not be rolled back."
+    },
+    "common": {
+      "delete": "Delete",
+      "warning": "Warning!"
+    }
+  },
+  "Categories": {
+    "title": "News Management",
+    "description": "Add, edit, or delete news to keep everyone constantly informed.",
+    "actions": {
+      "add": "Add Category",
+      "filter": "Filter categories...",
+      "view": "View"
+    },
+    "filters": {
+      "status": "Status"
+    },
+    "columns": {
+      "id": "#",
+      "categoryName": "Category Name",
+      "description": "Description",
+      "activitiesCount": "Activities Count",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "form": {
+      "editTitle": "Edit Category",
+      "addTitle": "Add Category",
+      "editDescription": "Update the category here.",
+      "addDescription": "Create a new category here. Click save when you’re done.",
+      "nameEn": "Name (EN)",
+      "nameEnPlaceholder": "Educational Activities",
+      "nameAr": "Name (AR)",
+      "nameArPlaceholder": "أنشطة تعليمية",
+      "descriptionEn": "Description (EN)",
+      "descriptionEnPlaceholder": "Activities aimed at supporting education and awareness",
+      "descriptionAr": "Description (AR)",
+      "descriptionArPlaceholder": "أنشطة تهدف إلى دعم التعليم والتوعية",
+      "status": "Status",
+      "statusPlaceholder": "Select status",
+      "updateButton": "Update",
+      "addButton": "Add New",
+      "errors": {
+        "nameRequired": "Category name is required.",
+        "nameTooLong": "Name too long.",
+        "nameArabicRequired": "Arabic name is required.",
+        "nameArabicTooLong": "Arabic name too long.",
+        "descriptionRequired": "Description is required.",
+        "descriptionTooLong": "Description too long.",
+        "descriptionArabicRequired": "Arabic description is required.",
+        "descriptionArabicTooLong": "Arabic description too long.",
+        "statusRequired": "Status is required.",
+        "activitiesCountNonNegative": "Activities count cannot be negative."
+      }
+    },
+    "deleteDialogs": {
+      "office": {
+        "title": "Delete Office",
+        "confirmQuestion": "Are you sure you want to delete",
+        "confirmCategory": "This action will permanently remove the office from the",
+        "enterCodePlaceholder": "Enter office code to confirm deletion.",
+        "deletedMessage": "The following office has been deleted:"
+      },
+      "role": {
+        "title": "Delete Role",
+        "confirmQuestion": "Are you sure you want to delete the role",
+        "confirmCategory": "This action will permanently remove the role of type",
+        "enterNamePlaceholder": "Enter role name to confirm deletion.",
+        "deletedMessage": "The following role has been deleted:"
+      },
+      "category": {
+        "title": "Delete Category",
+        "confirmQuestion": "Are you sure you want to delete",
+        "confirmCategory": "This action will permanently remove the category and affect",
+        "enterNamePlaceholder": "Enter category name to confirm deletion.",
+        "deletedMessage": "The following category has been deleted:"
+      },
+      "common": {
+        "warning": "Warning!",
+        "cannotBeUndone": "This cannot be undone.",
+        "delete": "Delete",
+        "deleteWarning": "Please be careful, this operation can not be rolled back."
+      }
+    }
+  },
+  "media": {
+    "editTitle": "Edit Media File",
+    "uploadTitle": "Upload Media File",
+    "editDesc": "Update the media file details here. Click save when you're done.",
+    "uploadDesc": "Upload and configure your media file here. Click save when you're done.",
+    "file": "File",
+    "preview": "Preview",
+    "filename": "Filename",
+    "displayName": "Display Name",
+    "displayNamePH": "Campaign Banner 1",
+    "category": "Category",
+    "categoryPH": "Select a category",
+    "alt": "Alt Text",
+    "altPH": "Descriptive alt text for accessibility",
+    "description": "Description",
+    "descriptionPH": "File description...",
+    "tags": "Tags",
+    "tagsPH": "campaign, banner, promotion",
+    "upload": "Upload",
+    "update": "Update",
+    "mediaTable": {
+      "preview": "Preview",
+      "filename": "Filename",
+      "type": "Type",
+      "size": "Size",
+      "category": "Category",
+      "uploadedBy": "Uploaded By",
+      "uploadDate": "Upload Date",
+      "actions": "Actions",
+      "selectAll": "Select all",
+      "selectRow": "Select row"
+    },
+    "mediaDelete": {
+      "title": "Delete Media File",
+      "desc": "Are you sure you want to delete {name}? This action will permanently remove the file from the {category} category. This cannot be undone.",
+      "filenameLabel": "Filename",
+      "filenamePlaceholder": "Enter filename to confirm deletion.",
+      "warningTitle": "Warning!",
+      "warningDesc": "Please be careful, this operation cannot be rolled back.",
+      "confirmText": "Delete"
+    },
+    "mediaView": {
+      "title": "Media File Details",
+      "desc": "View and download media file information",
+      "filename": "Filename",
+      "displayName": "Display Name",
+      "fileSize": "File Size",
+      "fileType": "File Type",
+      "uploadedBy": "Uploaded By",
+      "uploadDate": "Upload Date",
+      "category": "Category",
+      "tags": "Tags",
+      "description": "Description",
+      "download": "Download"
+    },
+    "mediaPage": {
+      "title": "Media Management",
+      "desc": "Add, edit, or delete media files to keep everything organized.",
+      "add": "Add media"
+    }
+  },
+  "pageDialog": {
+    "addTitle": "Add Page",
+    "editTitle": "Edit Page",
+    "addDesc": "Create a new page here. Click save when you're done.",
+    "editDesc": "Update the page here. Click save when you're done.",
+    "title": "Title",
+    "titlePH": "About Us",
+    "url": "URL",
+    "urlPH": "/about",
+    "description": "Description",
+    "descriptionPH": "Brief description of the page",
+    "status": "Status",
+    "statusPH": "Select status",
+    "metaTitle": "Meta Title",
+    "metaTitlePH": "SEO meta title",
+    "metaDescription": "Meta Description",
+    "metaDescriptionPH": "SEO meta description",
+    "content": "Content",
+    "contentPH": "Full page content...",
+    "addBtn": "Add Page",
+    "editBtn": "Save Changes",
+    "table": {
+      "selectAll": "Select all",
+      "selectRow": "Select row",
+      "pageTitle": "Page Title",
+      "url": "URL",
+      "description": "Description",
+      "status": "Status",
+      "createdDate": "Created Date"
+    },
+    "statustype": {
+      "draft": "Draft",
+      "published": "Published",
+      "unpublished": "Archived"
+    },
+    "pageDelete": {
+      "title": "Delete Page",
+      "confirmTextBefore": "Are you sure you want to delete",
+      "confirmTextAfter": "This will permanently remove the page with URL",
+      "cannotUndo": "This action cannot be undone.",
+      "urlLabel": "Page URL",
+      "urlPlaceholder": "Enter page URL to confirm deletion",
+      "warningTitle": "Warning!",
+      "warningDesc": "Please be careful, this operation cannot be rolled back.",
+      "confirmBtn": "Delete",
+      "deletedMessage": "The following page has been deleted:"
+    },
+    "pages": {
+      "title": "Pages Management",
+      "description": "Add, edit, or delete pages to keep your website organized."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "download": "Download",
+    "tabs": {
+      "overview": "Overview",
+      "analytics": "Analytics",
+      "reports": "Reports",
+      "notifications": "Notifications"
+    },
+    "cards": {
+      "totalDonations": "Total Donations",
+      "totalDonationsChange": "+20.1% from last month",
+      "projects": "Number of Projects",
+      "projectsChange": " wait the ok",
+      "volunteers": "Number of Volunteers",
+      "volunteersChange": "new volunteer",
+      "activities": "Number of Activities",
+      "activitiesChange": "activti this week"
+    },
+    "charts": {
+      "monthDonations": "Month Donations",
+      "monthDonationsDesc": "Statistics showing the value of donations received by the association each month",
+      "recentDonations": "Recent Donations",
+      "recentDonationsDesc": "256 donations were made to the association this month"
+    },
+    "nav": {
+      "overview": "Overview",
+      "customers": "Customers",
+      "products": "Products",
+      "settings": "Settings"
+    }
+  },
+  "topbar": {
+    "form": {
+      "addTitle": "Add Item",
+      "editTitle": "Edit Item",
+      "addDescription": "Create new navigation item. Click save when you're done.",
+      "editDescription": "Update the navigation item. Click save when you're done.",
+      "name": "Item Name",
+      "namePlaceholder": "Home",
+      "url": "URL",
+      "urlPlaceholder": "/home",
+      "order": "Order",
+      "orderPlaceholder": "1",
+      "status": "Status",
+      "statusPlaceholder": "Select status",
+      "addButton": "Add Item",
+      "updateButton": "Save Changes"
+    },
+    "table": {
+      "itemName": "Item Name",
+      "url": "URL",
+      "order": "Order",
+      "status": "Status",
+      "lastModified": "Last Modified"
+    },
+    "common": {
+      "selectAll": "Select all",
+      "selectRow": "Select row"
+    },
+    "statuses": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "draft": "Draft"
+    },
+    "deleteDialog": {
+      "title": "Delete Item",
+      "confirmMessage": "Are you sure you want to delete",
+      "warningText": "This action will permanently remove the navigation item. This cannot be undone.",
+      "itemName": "Item Name:",
+      "placeholder": "Enter item name to confirm deletion.",
+      "alertTitle": "Warning!",
+      "alertDescription": "Please be careful, this operation cannot be rolled back.",
+      "confirmButton": "Delete",
+      "deletedMessage": "The following item has been deleted:"
+    }
+  }
+}

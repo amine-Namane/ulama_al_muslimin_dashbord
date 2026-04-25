@@ -25,7 +25,15 @@ import { DataTablePagination, DataTableToolbar } from '@/components/data-table'
 import { roles } from '../data/data'
 import { type User } from '../data/schema'
 import { DataTableBulkActions } from './data-table-bulk-actions'
-import { usersColumns as columns } from './users-columns'
+import { usersColumns } from './users-columns'
+import { useTranslation } from "react-i18next"
+
+declare module '@tanstack/react-table' {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  interface ColumnMeta<TData, TValue> {
+    className: string
+  }
+}
 
 type DataTableProps = {
   data: User[]
@@ -34,6 +42,8 @@ type DataTableProps = {
 }
 
 export function UsersTable({ data, search, navigate }: DataTableProps) {
+  const { t } = useTranslation()
+      const columns = usersColumns()
   // Local UI-only states
   const [rowSelection, setRowSelection] = useState({})
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({})
@@ -63,7 +73,6 @@ export function UsersTable({ data, search, navigate }: DataTableProps) {
     ],
   })
 
-  // eslint-disable-next-line react-hooks/incompatible-library
   const table = useReactTable({
     data,
     columns,
@@ -93,20 +102,15 @@ export function UsersTable({ data, search, navigate }: DataTableProps) {
   }, [table, ensurePageInRange])
 
   return (
-    <div
-      className={cn(
-        'max-sm:has-[div[role="toolbar"]]:mb-16', // Add margin bottom to the table on mobile when the toolbar is visible
-        'flex flex-1 flex-col gap-4'
-      )}
-    >
+    <div className='space-y-4 max-sm:has-[div[role="toolbar"]]:mb-16'>
       <DataTableToolbar
         table={table}
-        searchPlaceholder='Filter users...'
+        searchPlaceholder= {t("users.actions.filter")}
         searchKey='username'
         filters={[
           {
             columnId: 'status',
-            title: 'Status',
+            title: t("users.columns.status"),
             options: [
               { label: 'Active', value: 'active' },
               { label: 'Inactive', value: 'inactive' },
@@ -116,7 +120,7 @@ export function UsersTable({ data, search, navigate }: DataTableProps) {
           },
           {
             columnId: 'role',
-            title: 'Role',
+            title: t("users.columns.role"),
             options: roles.map((role) => ({ ...role })),
           },
         ]}
@@ -133,8 +137,7 @@ export function UsersTable({ data, search, navigate }: DataTableProps) {
                       colSpan={header.colSpan}
                       className={cn(
                         'bg-background group-hover/row:bg-muted group-data-[state=selected]/row:bg-muted',
-                        header.column.columnDef.meta?.className,
-                        header.column.columnDef.meta?.thClassName
+                        header.column.columnDef.meta?.className ?? ''
                       )}
                     >
                       {header.isPlaceholder
@@ -162,8 +165,7 @@ export function UsersTable({ data, search, navigate }: DataTableProps) {
                       key={cell.id}
                       className={cn(
                         'bg-background group-hover/row:bg-muted group-data-[state=selected]/row:bg-muted',
-                        cell.column.columnDef.meta?.className,
-                        cell.column.columnDef.meta?.tdClassName
+                        cell.column.columnDef.meta?.className ?? ''
                       )}
                     >
                       {flexRender(
@@ -187,7 +189,7 @@ export function UsersTable({ data, search, navigate }: DataTableProps) {
           </TableBody>
         </Table>
       </div>
-      <DataTablePagination table={table} className='mt-auto' />
+      <DataTablePagination table={table} />
       <DataTableBulkActions table={table} />
     </div>
   )
