@@ -118,7 +118,7 @@ import { useNavigate, useSearch, useRouter } from '@tanstack/react-router';
 // import { useAuthStore } from '@/context/authContext';
 // import Swal from 'sweetalert2';
 
-export const Login = () => {
+export const UserAuthForm = () => {
   const router = useRouter();
   const navigate = useNavigate();
   const { redirect } = useSearch({ from: '/(auth)/sign-in' });

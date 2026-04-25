@@ -23,7 +23,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { SelectDropdown } from "@/components/select-dropdown"
-import { algerianStates } from "@/features/offices/data/data"
 import type { Activity } from "../data/schema"
 import { useTranslation } from "react-i18next"
 
@@ -100,12 +99,12 @@ export function AddActivityDialog({ open, onOpenChange, currentRow }: AddActivit
                     <FormItem>
                       <FormLabel>{t("activities.form.fields.state")}</FormLabel>
                       <FormControl>
-                        <SelectDropdown
+                        {/* <SelectDropdown
                           defaultValue={field.value}
                           onValueChange={field.onChange}
                           placeholder={t("activities.form.fields.statePlaceholder")}
                           items={algerianStates.map(({ label, value }) => ({ label, value }))}
-                        />
+                        /> */}
                       </FormControl>
                       <FormMessage />
                     </FormItem>

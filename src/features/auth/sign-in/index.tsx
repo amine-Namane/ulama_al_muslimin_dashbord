@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import { AuthLayout } from '../auth-layout'
-import { Login } from './components/user-auth-form'
+import { UserAuthForm } from './components/user-auth-form'
 
 export function SignIn() {
   const { redirect } = useSearch({ from: '/(auth)/sign-in' })
@@ -24,7 +24,7 @@ export function SignIn() {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Login />
+          <UserAuthForm />
         </CardContent>
         <CardFooter>
           <p className='px-8 text-center text-sm text-muted-foreground'>
